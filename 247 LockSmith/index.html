@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>247 Locksmith — Brampton's 24/7 Emergency Locksmith</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sky:       #0EA5E9;   /* sky blue — hero bg, nav accent */
+  --sky-dk:    #0284C7;   /* darker sky for hover */
+  --sky-lt:    #E0F2FE;   /* pale sky tint */
+  --green:     #16A34A;   /* light green — keyword highlights */
+  --green-bg:  #DCFCE7;   /* green pill background */
+  --text:      #111827;   /* near-black body text */
+  --muted:     #6B7280;   /* secondary text */
+  --border:    #E5E7EB;
+  --white:     #ffffff;
+  --surface:   #F9FAFB;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;}
+
+/* ── keyword highlight — used inline on important words ── */
+.kw {
+  color: var(--green);
+  font-weight: 700;
+}
+.kw-pill {
+  display:inline-block;
+  background:var(--green-bg);
+  color:var(--green);
+  font-weight:700;
+  padding:2px 10px;
+  border-radius:100px;
+  font-size:0.92em;
+}
+
+/* ════════════════════════════════
+   NAV
+════════════════════════════════ */
+nav {
+  position:sticky;top:0;z-index:200;
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 60px;height:62px;
+  box-shadow:0 1px 10px rgba(0,0,0,0.06);
+}
+.nav-logo {
+  font-size:21px;font-weight:900;color:var(--text);letter-spacing:-0.03em;
+}
+.nav-logo span{color:var(--sky);}
+.nav-links{display:flex;gap:4px;list-style:none;}
+.nav-links a {
+  padding:7px 15px;border-radius:6px;
+  font-size:14px;font-weight:500;color:var(--muted);
+  text-decoration:none;transition:all 0.15s;
+}
+.nav-links a:hover{color:var(--text);background:var(--sky-lt);}
+.nav-cta {
+  display:flex;align-items:center;gap:8px;
+  background:var(--sky);color:#fff;
+  padding:10px 22px;border-radius:8px;
+  font-size:14px;font-weight:700;text-decoration:none;
+  box-shadow:0 2px 10px rgba(14,165,233,0.35);
+  transition:background 0.15s;
+}
+.nav-cta:hover{background:var(--sky-dk);}
+
+/* ════════════════════════════════
+   HERO — sky blue
+════════════════════════════════ */
+.hero {
+  background: linear-gradient(160deg, #0EA5E9 0%, #0284C7 100%);
+  padding: 80px 60px 88px;
+  position:relative;overflow:hidden;
+}
+/* subtle dot grid */
+.hero::before {
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size:28px 28px;
+}
+.hero-inner {
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 380px;gap:72px;align-items:center;
+  position:relative;z-index:1;
+}
+
+/* badge */
+.hero-badge {
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.15);
+  border:1px solid rgba(255,255,255,0.3);
+  color:#fff;padding:6px 16px;border-radius:100px;
+  font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:22px;backdrop-filter:blur(4px);
+}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:#fff;}
+
+h1 {
+  font-size:clamp(40px,4.2vw,60px);
+  font-weight:900;line-height:1.08;letter-spacing:-0.03em;
+  color:#fff;margin-bottom:20px;
+}
+h1 .h1-green {
+  /* green on sky = readable & stands out */
+  background:#DCFCE7;
+  color:#15803D;
+  padding:0 10px 2px;
+  border-radius:6px;
+  display:inline-block;
+}
+
+.hero-sub {
+  font-size:17px;line-height:1.7;
+  color:rgba(255,255,255,0.85);
+  font-weight:400;max-width:520px;margin-bottom:36px;
+}
+
+/* CTA buttons */
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px;}
+.btn-white {
+  display:inline-flex;align-items:center;gap:10px;
+  background:#fff;color:var(--sky-dk);
+  padding:16px 32px;border-radius:10px;
+  font-size:16px;font-weight:800;letter-spacing:-0.01em;
+  text-decoration:none;
+  box-shadow:0 4px 20px rgba(0,0,0,0.15);
+  transition:all 0.15s;
+}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.18);}
+.btn-ghost {
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.15);color:#fff;
+  border:1.5px solid rgba(255,255,255,0.4);
+  padding:15px 28px;border-radius:10px;
+  font-size:15px;font-weight:600;
+  text-decoration:none;backdrop-filter:blur(4px);
+  transition:all 0.15s;
+}
+.btn-ghost:hover{background:rgba(255,255,255,0.25);}
+
+/* trust pills */
+.hero-trust{display:flex;gap:16px;flex-wrap:wrap;}
+.t-pill{
+  display:flex;align-items:center;gap:7px;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  color:#fff;padding:7px 14px;border-radius:100px;
+  font-size:13px;font-weight:500;backdrop-filter:blur(4px);
+}
+.t-pill::before{content:'✓';font-weight:800;font-size:11px;background:rgba(255,255,255,0.25);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+
+/* hero card */
+.hero-card {
+  background:#fff;border-radius:16px;
+  padding:30px;
+  box-shadow:0 12px 48px rgba(0,0,0,0.18);
+}
+.hc-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
+.hc-stat{
+  text-align:center;padding:20px 0;
+  border-bottom:1px solid var(--border);margin-bottom:20px;
+}
+.hc-num{font-size:64px;font-weight:900;color:var(--sky);line-height:1;letter-spacing:-0.04em;}
+.hc-unit{font-size:24px;color:var(--muted);}
+.hc-label{font-size:14px;color:var(--muted);margin-top:4px;font-weight:500;}
+.hc-list{display:flex;flex-direction:column;gap:0;margin-bottom:20px;}
+.hc-row{
+  display:flex;align-items:center;gap:12px;
+  padding:11px 0;border-bottom:1px solid var(--border);
+  font-size:14px;font-weight:500;color:var(--text);
+}
+.hc-row:last-child{border-bottom:none;}
+.hc-row .icon{font-size:17px;width:24px;text-align:center;flex-shrink:0;}
+.hc-btn {
+  display:block;text-align:center;
+  background:var(--sky);color:#fff;
+  padding:14px;border-radius:8px;
+  font-size:15px;font-weight:800;text-decoration:none;
+  box-shadow:0 3px 12px rgba(14,165,233,0.35);
+  transition:background 0.15s;
+}
+.hc-btn:hover{background:var(--sky-dk);}
+
+/* ════════════════════════════════
+   SECTION SHARED — white bg
+════════════════════════════════ */
+.sec{padding:72px 60px;}
+.sec-alt{background:var(--surface);}
+.sec-dark{background:#111827;}
+.sec-inner{max-width:1200px;margin:0 auto;}
+
+.sec-label{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--sky);margin-bottom:10px;
+}
+.sec-label::before{content:'';width:20px;height:2px;background:var(--sky);}
+
+h2{
+  font-size:clamp(26px,2.8vw,38px);font-weight:800;
+  letter-spacing:-0.025em;line-height:1.15;
+  color:var(--text);margin-bottom:10px;
+}
+.sec-dark h2{color:#fff;}
+.sec-sub{font-size:16px;color:var(--muted);max-width:520px;line-height:1.65;}
+
+/* ════════════════════════════════
+   SERVICES
+════════════════════════════════ */
+.svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:40px;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.svc-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:12px;padding:26px;
+  transition:all 0.2s;
+}
+.svc-card:hover{border-color:var(--sky);box-shadow:0 6px 28px rgba(14,165,233,0.1);transform:translateY(-3px);}
+.svc-card.top{border-top:3px solid var(--sky);}
+.svc-em{font-size:26px;margin-bottom:12px;display:block;}
+.svc-name{font-size:16px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.svc-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px;}
+.svc-badge{
+  display:inline-block;
+  background:var(--green-bg);color:var(--green);
+  padding:3px 10px;border-radius:100px;
+  font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+}
+
+/* ════════════════════════════════
+   WHY US
+════════════════════════════════ */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:44px;}
+.why-list{display:flex;flex-direction:column;}
+.why-item{
+  display:flex;gap:16px;
+  padding:22px 0;border-bottom:1px solid var(--border);
+}
+.why-item:first-child{padding-top:0;}
+.why-item:last-child{border-bottom:none;}
+.wi-num{
+  width:34px;height:34px;border-radius:8px;
+  background:var(--sky-lt);color:var(--sky-dk);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:800;flex-shrink:0;
+}
+.wi-body h4{font-size:15px;font-weight:700;color:var(--text);margin-bottom:5px;}
+.wi-body p{font-size:14px;color:var(--muted);line-height:1.6;}
+
+.why-right{display:flex;flex-direction:column;gap:10px;}
+.wr{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:10px;padding:18px 20px;
+  display:flex;align-items:center;gap:14px;
+}
+.wr.featured{background:var(--sky-lt);border-color:#BAE6FD;}
+.wr-icon{font-size:22px;flex-shrink:0;}
+.wr-body strong{display:block;font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px;}
+.wr-body span{font-size:13px;color:var(--muted);}
+.call-box{
+  background:var(--sky);border-radius:10px;
+  padding:22px;text-align:center;margin-top:4px;
+}
+.call-box p{font-size:12px;color:rgba(255,255,255,0.8);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;}
+.call-box a{font-size:28px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:-0.02em;display:block;margin-bottom:4px;}
+.call-box small{font-size:12px;color:rgba(255,255,255,0.7);}
+
+/* ════════════════════════════════
+   AREAS
+════════════════════════════════ */
+.areas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:36px;}
+.area{
+  background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
+  border-radius:8px;padding:14px;text-align:center;transition:all 0.15s;
+}
+.area:hover,.area.home{background:var(--sky);border-color:var(--sky);}
+.area-n{font-size:14px;font-weight:600;color:rgba(255,255,255,0.8);}
+.area.home .area-n,.area:hover .area-n{color:#fff;font-weight:700;}
+.area-d{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px;}
+
+/* ════════════════════════════════
+   REVIEWS
+════════════════════════════════ */
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;}
+.review{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:12px;padding:26px;
+}
+.rev-stars{font-size:15px;color:#F59E0B;letter-spacing:1px;margin-bottom:10px;}
+.rev-text{font-size:14px;color:var(--text);line-height:1.65;margin-bottom:18px;font-style:italic;}
+.rev-author{display:flex;align-items:center;gap:10px;}
+.rev-av{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--sky);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:14px;font-weight:800;flex-shrink:0;
+}
+.rev-name strong{display:block;font-size:13px;font-weight:700;}
+.rev-name span{font-size:12px;color:var(--muted);}
+
+/* ════════════════════════════════
+   CONTACT
+════════════════════════════════ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:44px;}
+.contact-pitch{font-size:16px;color:var(--muted);line-height:1.7;margin-bottom:24px;}
+.cm-list{display:flex;flex-direction:column;gap:10px;}
+.cm{
+  display:flex;align-items:center;gap:14px;
+  background:var(--white);border:1px solid var(--border);
+  border-radius:10px;padding:16px 18px;
+  text-decoration:none;transition:all 0.15s;
+}
+.cm:hover{border-color:var(--sky);}
+.cm-icon{
+  width:42px;height:42px;border-radius:8px;
+  background:var(--sky-lt);color:var(--sky);
+  display:flex;align-items:center;justify-content:center;
+  font-size:19px;flex-shrink:0;
+}
+.cm-body strong{display:block;font-size:14px;font-weight:700;color:var(--text);}
+.cm-body span{font-size:13px;color:var(--muted);}
+.cm-arr{margin-left:auto;color:var(--muted);font-size:18px;}
+
+/* form */
+.form-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:14px;padding:32px;
+}
+.ft{font-size:19px;font-weight:800;color:var(--text);letter-spacing:-0.02em;margin-bottom:4px;}
+.fs{font-size:14px;color:var(--muted);margin-bottom:22px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.fg{margin-bottom:12px;}
+.fg label{display:block;font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
+.fg input,.fg select,.fg textarea{
+  width:100%;padding:11px 14px;
+  border:1.5px solid var(--border);border-radius:8px;
+  font-family:'Inter',sans-serif;font-size:14px;color:var(--text);
+  background:var(--white);outline:none;transition:border-color 0.15s;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--sky);}
+.fg textarea{height:88px;resize:vertical;}
+.fbtn{
+  width:100%;padding:15px;border:none;border-radius:8px;cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:800;
+  background:var(--sky);color:#fff;
+  box-shadow:0 4px 16px rgba(14,165,233,0.35);
+  transition:all 0.15s;margin-top:4px;
+}
+.fbtn:hover{background:var(--sky-dk);transform:translateY(-1px);}
+.fn{text-align:center;font-size:12px;color:var(--muted);margin-top:8px;}
+
+/* ════════════════════════════════
+   FOOTER
+════════════════════════════════ */
+footer{background:#0F172A;padding:52px 60px 24px;}
+.footer-inner{max-width:1200px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.flogo{font-size:20px;font-weight:900;color:#fff;letter-spacing:-0.02em;margin-bottom:10px;}
+.flogo span{color:var(--sky);}
+.fdesc{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.65;margin-bottom:14px;}
+.fphone{font-size:17px;font-weight:700;color:#fff;text-decoration:none;}
+.fcol h4{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#fff;margin-bottom:14px;}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.fcol ul li a{color:rgba(255,255,255,0.45);text-decoration:none;font-size:14px;transition:color 0.15s;}
+.fcol ul li a:hover{color:#fff;}
+.footer-bot{padding-top:20px;display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,0.25);}
+
+/* floating */
+.float{
+  position:fixed;bottom:22px;right:22px;z-index:999;
+  display:flex;align-items:center;gap:9px;
+  background:var(--sky);color:#fff;
+  padding:13px 22px;border-radius:100px;
+  font-size:15px;font-weight:800;text-decoration:none;
+  box-shadow:0 6px 24px rgba(14,165,233,0.45);
+  animation:bob 3s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+.float:hover{animation:none;transform:scale(1.04);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">247 <span>Locksmith</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#areas">Areas</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:4372266769" class="nav-cta">📞 (437) 226-6769</a>
+</nav>
+
+<!-- ══ HERO — sky blue ══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">Brampton's #1 Rated Locksmith</div>
+      <h1>
+        Locked Out?<br>
+        We Arrive in<br>
+        <span class="h1-green">15 Minutes.</span>
+      </h1>
+      <p class="hero-sub">
+        <strong>247 Locksmith</strong> — Brampton's trusted <span style="font-weight:700;color:#fff;">24/7 emergency locksmith</span> for homes, cars &amp; businesses. Licensed, insured, always on call.
+      </p>
+      <div class="hero-btns">
+        <a href="tel:4372266769" class="btn-white">📞 Call (437) 226-6769 — Free</a>
+        <a href="#contact" class="btn-ghost">Book Online →</a>
+      </div>
+      <div class="hero-trust">
+        <div class="t-pill">15-Min Response</div>
+        <div class="t-pill">Open 24/7</div>
+        <div class="t-pill">5-Star Rated</div>
+        <div class="t-pill">Licensed & Insured</div>
+      </div>
+    </div>
+
+    <!-- card -->
+    <div class="hero-card">
+      <div class="hc-eyebrow">Why customers call us first</div>
+      <div class="hc-stat">
+        <div class="hc-num">15<span class="hc-unit">min</span></div>
+        <div class="hc-label">Average arrival in Brampton</div>
+      </div>
+      <div class="hc-list">
+        <div class="hc-row"><span class="icon">🏠</span> Residential Lockouts</div>
+        <div class="hc-row"><span class="icon">🚗</span> Car Key Replacement</div>
+        <div class="hc-row"><span class="icon">🏢</span> Commercial Locks</div>
+        <div class="hc-row"><span class="icon">🗝️</span> Rekeying & Key Cutting</div>
+        <div class="hc-row"><span class="icon">🔐</span> Safes & Access Control</div>
+      </div>
+      <a href="tel:4372266769" class="hc-btn">Call Now — (437) 226-6769</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES — white ══ -->
+<section class="sec" id="services">
+  <div class="sec-inner">
+    <div class="svc-head">
+      <div>
+        <div class="sec-label">What We Do</div>
+        <h2>Every Lock Problem, <span class="kw">Solved.</span></h2>
+      </div>
+      <p class="sec-sub">Residential, automotive, or commercial — we handle every situation, any time of day.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card top">
+        <span class="svc-em">⚡</span>
+        <div class="svc-name">Emergency Lockout</div>
+        <p class="svc-desc">Locked out of your home, car or office? We're at your door in <span class="kw">15 minutes</span> — day or night, 365 days a year.</p>
+        <span class="svc-badge">24/7 Available</span>
+      </div>
+      <div class="svc-card top">
+        <span class="svc-em">🔧</span>
+        <div class="svc-name">Lock Installation & Repair</div>
+        <p class="svc-desc">New deadbolts, <span class="kw">smart locks</span>, or repair of damaged locks — installed with a full warranty on all parts and labour.</p>
+        <span class="svc-badge">Residential</span>
+      </div>
+      <div class="svc-card top">
+        <span class="svc-em">🚗</span>
+        <div class="svc-name">Automotive Key Replacement</div>
+        <p class="svc-desc">Lost car keys or broken fobs? We cut and <span class="kw">program keys on-site</span> for all makes and models — no dealership needed.</p>
+        <span class="svc-badge">All Makes</span>
+      </div>
+      <div class="svc-card">
+        <span class="svc-em">🗝️</span>
+        <div class="svc-name">Rekeying & Key Duplication</div>
+        <p class="svc-desc">Just moved in? Lost a key? We <span class="kw">rekey your locks fast</span> so only your new keys work — affordable, same-day service.</p>
+        <span class="svc-badge">Same Day</span>
+      </div>
+      <div class="svc-card">
+        <span class="svc-em">🏢</span>
+        <div class="svc-name">Commercial Locksmith</div>
+        <p class="svc-desc"><span class="kw">Master key systems</span>, access control, high-security locks, and after-hours emergency response for businesses.</p>
+        <span class="svc-badge">Commercial</span>
+      </div>
+      <div class="svc-card">
+        <span class="svc-em">🔐</span>
+        <div class="svc-name">Safes & Access Control</div>
+        <p class="svc-desc">Safe installation, <span class="kw">combination changes</span>, lockouts, and smart access control setup for homes and offices.</p>
+        <span class="svc-badge">Advanced Security</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY US — surface ══ -->
+<section class="sec sec-alt" id="why">
+  <div class="sec-inner">
+    <div class="sec-label">Why Choose Us</div>
+    <h2>Brampton's Most <span class="kw">Trusted</span> Locksmith</h2>
+    <p class="sec-sub">Fast, honest, and locally based — we treat your security like it's our own.</p>
+    <div class="why-grid">
+      <div class="why-list">
+        <div class="why-item">
+          <div class="wi-num">1</div>
+          <div class="wi-body">
+            <h4><span class="kw">15-Minute Response</span> — Guaranteed</h4>
+            <p>We're based right here in Brampton. When you call, we're minutes away — not driving in from across the GTA.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="wi-num">2</div>
+          <div class="wi-body">
+            <h4><span class="kw">Upfront Pricing</span> — No Surprises</h4>
+            <p>We quote you before we start. What we say is what you pay. No hidden fees or inflated emergency surcharges.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="wi-num">3</div>
+          <div class="wi-body">
+            <h4><span class="kw">Licensed, Bonded</span> & Fully Insured</h4>
+            <p>Every technician is certified and background-checked. Your home and property are always fully protected.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="wi-num">4</div>
+          <div class="wi-body">
+            <h4><span class="kw">Family Owned</span> — We Actually Care</h4>
+            <p>You'll speak to a real person who knows your neighbourhood and stands behind every job we do.</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-right">
+        <div class="wr featured">
+          <div class="wr-icon">⚡</div>
+          <div class="wr-body">
+            <strong>Open <span class="kw">24 Hours</span>, Every Day</strong>
+            <span>3am lockout? We answer every call, every time.</span>
+          </div>
+        </div>
+        <div class="wr">
+          <div class="wr-icon">⭐</div>
+          <div class="wr-body">
+            <strong><span class="kw">5-Star</span> Google Reviews</strong>
+            <span>Hundreds of verified ratings from GTA homeowners</span>
+          </div>
+        </div>
+        <div class="wr">
+          <div class="wr-icon">🛡️</div>
+          <div class="wr-body">
+            <strong><span class="kw">Workmanship Warranty</span></strong>
+            <span>All installs and repairs backed by our quality guarantee</span>
+          </div>
+        </div>
+        <div class="wr">
+          <div class="wr-icon">💳</div>
+          <div class="wr-body">
+            <strong>All <span class="kw">Payment Methods</span> Accepted</strong>
+            <span>Cash, debit, credit — whatever works for you</span>
+          </div>
+        </div>
+        <div class="call-box">
+          <p>Free to call — No obligation</p>
+          <a href="tel:4372266769">(437) 226-6769</a>
+          <small>Open 24 hours · Always answered</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AREAS — dark ══ -->
+<section class="sec sec-dark" id="areas">
+  <div class="sec-inner">
+    <div class="sec-label" style="color:rgba(125,211,252,0.9);">Service Areas</div>
+    <h2>Based in <span style="color:#7DD3FC;">Brampton</span>, Serving All of GTA</h2>
+    <p class="sec-sub" style="color:rgba(255,255,255,0.5);">Within an hour of Brampton? We come to you — any time, any day.</p>
+    <div class="areas-grid">
+      <div class="area home"><div class="area-n">⭐ Brampton</div><div class="area-d">Home Base</div></div>
+      <div class="area"><div class="area-n">Mississauga</div><div class="area-d">10 min</div></div>
+      <div class="area"><div class="area-n">Toronto</div><div class="area-d">All areas</div></div>
+      <div class="area"><div class="area-n">Etobicoke</div><div class="area-d">20 min</div></div>
+      <div class="area"><div class="area-n">Vaughan</div><div class="area-d">15 min</div></div>
+      <div class="area"><div class="area-n">Caledon</div><div class="area-d">20 min</div></div>
+      <div class="area"><div class="area-n">Milton</div><div class="area-d">25 min</div></div>
+      <div class="area"><div class="area-n">Oakville</div><div class="area-d">30 min</div></div>
+      <div class="area"><div class="area-n">Burlington</div><div class="area-d">35 min</div></div>
+      <div class="area"><div class="area-n">North York</div><div class="area-d">25 min</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REVIEWS — white ══ -->
+<section class="sec" id="reviews">
+  <div class="sec-inner">
+    <div class="sec-label">Customer Reviews</div>
+    <h2>What Brampton Homeowners <span class="kw">Say</span></h2>
+    <p class="sec-sub">Real reviews from real customers — verified on Google.</p>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Called at 2am completely locked out. They answered immediately and were at my door in <strong>under 15 minutes</strong>. Professional, fair price, and no stress. Will never call anyone else."</p>
+        <div class="rev-author">
+          <div class="rev-av">A</div>
+          <div class="rev-name"><strong>Amrit S.</strong><span>Brampton · Emergency Lockout</span></div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Lost my car keys and they came out same day, <strong>cut a new key and programmed the fob on the spot</strong>. Half the price of the dealership. Honest, fast, highly recommend."</p>
+        <div class="rev-author">
+          <div class="rev-av">D</div>
+          <div class="rev-name"><strong>Danielle M.</strong><span>Mississauga · Car Key Replacement</span></div>
+        </div>
+      </div>
+      <div class="review">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Just moved in and wanted all locks rekeyed. Came next morning, <strong>did all 4 locks in 30 minutes</strong>, charged exactly what they quoted. Perfect service."</p>
+        <div class="rev-author">
+          <div class="rev-av">R</div>
+          <div class="rev-name"><strong>Ravi P.</strong><span>Brampton · Lock Rekeying</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT — surface ══ -->
+<section class="sec sec-alt" id="contact">
+  <div class="sec-inner">
+    <div class="sec-label">Get in Touch</div>
+    <h2>Get Your <span class="kw">Free Quote</span> Today</h2>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-pitch">The fastest way to reach us is a call — we pick up <span class="kw">24 hours a day</span>. Or fill out the form and we'll call you back within the hour.</p>
+        <div class="cm-list">
+          <a href="tel:4372266769" class="cm">
+            <div class="cm-icon">📞</div>
+            <div class="cm-body"><strong>(437) 226-6769</strong><span>Call or text — answered 24/7</span></div>
+            <div class="cm-arr">›</div>
+          </a>
+          <a href="mailto:info.plocks@gmail.com" class="cm">
+            <div class="cm-icon">✉️</div>
+            <div class="cm-body"><strong>info.plocks@gmail.com</strong><span>Email — reply within 1 hour</span></div>
+            <div class="cm-arr">›</div>
+          </a>
+          <div class="cm">
+            <div class="cm-icon">📍</div>
+            <div class="cm-body"><strong>1 Shenstone Ave, Brampton ON L6Z 2Y6</strong><span>Serving Brampton & all of GTA</span></div>
+          </div>
+          <div class="cm">
+            <div class="cm-icon">🕐</div>
+            <div class="cm-body"><strong>Open 24 Hours · 7 Days a Week</strong><span>No holidays, no exceptions</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="ft">Book a Service</div>
+        <div class="fs">We'll call you back within 60 minutes.</div>
+        <div class="frow">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="John"></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+        </div>
+        <div class="frow">
+          <div class="fg"><label>Phone</label><input type="tel" placeholder="(437) 000-0000"></div>
+          <div class="fg"><label>City</label><input type="text" placeholder="Brampton"></div>
+        </div>
+        <div class="fg">
+          <label>Service Needed</label>
+          <select>
+            <option>Emergency Lockout</option>
+            <option>Lock Installation / Repair</option>
+            <option>Car Key Replacement</option>
+            <option>Rekeying</option>
+            <option>Safe Services</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fg"><label>Notes</label><textarea placeholder="Any details about your situation..."></textarea></div>
+        <button class="fbtn" onclick="alert('Thanks! We\'ll call you within 60 minutes.\nOr call us now: (437) 226-6769')">Request Free Quote →</button>
+        <p class="fn">🔒 Your info is private. No spam, ever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="flogo">247 <span>Locksmith</span></div>
+        <p class="fdesc">Brampton's trusted 24/7 emergency locksmith. Licensed, insured, and committed to fast, honest service across the GTA.</p>
+        <a href="tel:4372266769" class="fphone">(437) 226-6769</a>
+      </div>
+      <div class="fcol">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Emergency Lockout</a></li>
+          <li><a href="#services">Lock Installation</a></li>
+          <li><a href="#services">Car Key Replacement</a></li>
+          <li><a href="#services">Rekeying</a></li>
+          <li><a href="#services">Safe Services</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Areas</h4>
+        <ul>
+          <li><a href="#areas">Brampton</a></li>
+          <li><a href="#areas">Mississauga</a></li>
+          <li><a href="#areas">Toronto</a></li>
+          <li><a href="#areas">Vaughan</a></li>
+          <li><a href="#areas">Oakville</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="tel:4372266769">Call Now</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2025 247 Locksmith · Brampton, Ontario · All rights reserved.</span>
+      <span>Licensed & Insured · Ontario Locksmith</span>
+    </div>
+  </div>
+</footer>
+
+<a href="tel:4372266769" class="float">📞 (437) 226-6769</a>
+
+<script>
+const obs = new IntersectionObserver(e => {
+  e.forEach(el => {
+    if (el.isIntersecting) { el.target.style.opacity='1'; el.target.style.transform='translateY(0)'; }
+  });
+}, {threshold:0.08});
+document.querySelectorAll('.svc-card,.why-item,.review,.area,.wr').forEach(el => {
+  el.style.opacity='0'; el.style.transform='translateY(14px)';
+  el.style.transition='opacity 0.4s ease, transform 0.4s ease';
+  obs.observe(el);
+});
+const links = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  document.querySelectorAll('section[id]').forEach(s => { if (scrollY >= s.offsetTop-100) cur=s.id; });
+  links.forEach(a => {
+    const on = a.getAttribute('href')==='#'+cur;
+    a.style.color = on ? 'var(--sky-dk)' : '';
+    a.style.background = on ? 'var(--sky-lt)' : '';
+  });
+});
+</script>
+</body>
+</html>
