@@ -439,6 +439,62 @@ footer{background:#0F172A;padding:52px 60px 24px;}
 .float:hover{animation:none;transform:scale(1.04);}
 
 /* ════════════════════════════════
+   BLOG / SERVICE PICS
+════════════════════════════════ */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;}
+.blog-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:14px;overflow:hidden;transition:all 0.2s;
+}
+.blog-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.08);transform:translateY(-3px);}
+.blog-img{
+  width:100%;height:180px;
+  background:linear-gradient(135deg,var(--sky-lt) 0%,#BAE6FD 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-size:56px;position:relative;overflow:hidden;
+}
+.blog-img-label{
+  position:absolute;bottom:10px;left:12px;
+  background:rgba(0,0,0,0.55);color:#fff;
+  font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;
+  padding:4px 10px;border-radius:100px;
+}
+.blog-body{padding:20px;}
+.blog-tag{
+  display:inline-block;background:var(--sky-lt);color:var(--sky-dk);
+  font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  padding:3px 10px;border-radius:100px;margin-bottom:10px;
+}
+.blog-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;line-height:1.4;}
+.blog-excerpt{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px;}
+.blog-link{font-size:13px;font-weight:700;color:var(--sky);text-decoration:none;}
+.blog-link:hover{color:var(--sky-dk);}
+
+/* ════════════════════════════════
+   FAQ
+════════════════════════════════ */
+.faq-list{display:flex;flex-direction:column;gap:0;margin-top:36px;max-width:800px;}
+.faq-item{
+  border-bottom:1px solid var(--border);
+}
+.faq-q{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:20px 0;cursor:pointer;
+  font-size:16px;font-weight:700;color:var(--text);
+  list-style:none;
+}
+.faq-q::-webkit-details-marker{display:none;}
+.faq-q::after{
+  content:'+';font-size:22px;font-weight:400;color:var(--sky);
+  flex-shrink:0;transition:transform 0.2s;
+}
+details[open] .faq-q::after{transform:rotate(45deg);}
+.faq-a{
+  font-size:14px;color:var(--muted);line-height:1.7;
+  padding-bottom:20px;
+}
+
+/* ════════════════════════════════
    AUTOMOTIVE SECTION
 ════════════════════════════════ */
 .auto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
@@ -493,6 +549,7 @@ footer{background:#0F172A;padding:52px 60px 24px;}
   .svc-head{flex-direction:column;align-items:flex-start;gap:12px;}
   .svc-grid{grid-template-columns:1fr;}
   .auto-grid{grid-template-columns:1fr;}
+  .blog-grid{grid-template-columns:1fr;}
 
   /* WHY US */
   .why-grid{grid-template-columns:1fr;gap:36px;}
@@ -535,7 +592,7 @@ footer{background:#0F172A;padding:52px 60px 24px;}
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#automotive">Automotive</a></li>
-    <li><a href="#why">Why Us</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#areas">Areas</a></li>
     <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -647,13 +704,13 @@ footer{background:#0F172A;padding:52px 60px 24px;}
         <div class="sec-label">Car Locksmith in Brampton & Mississauga</div>
         <h2>Automotive Locksmith <span class="kw">Services</span></h2>
       </div>
-      <p class="sec-sub">Locked out of your car? Lost your keys? Fast, affordable automotive locksmith services in Brampton — no dealership required.</p>
+      <p class="sec-sub">Locked out of your car? Lost your keys? Fast, affordable <span class="kw">car locksmith in Brampton & Mississauga</span> — <span class="kw">24/7 emergency support</span>, no dealership required.</p>
     </div>
     <div class="auto-grid">
       <div class="auto-card">
         <span class="auto-em">🔑</span>
-        <div class="auto-name">Auto Key Programming</div>
-        <p class="auto-desc">We program transponder keys, chip keys, and smart keys on-site for all makes and models. <span class="kw">Auto key programming in Brampton</span> at a fraction of dealership cost.</p>
+        <div class="auto-name">Car Key Programming & Replacement</div>
+        <p class="auto-desc">We program <span class="kw">transponder keys</span>, chip keys, and smart keys on-site for all makes and models. <span class="kw">Car key programming and replacement in Brampton</span> at a fraction of dealership cost.</p>
         <span class="svc-badge">All Makes & Models</span>
       </div>
       <div class="auto-card">
@@ -664,8 +721,8 @@ footer{background:#0F172A;padding:52px 60px 24px;}
       </div>
       <div class="auto-card">
         <span class="auto-em">🔧</span>
-        <div class="auto-name">Ignition Repair Brampton</div>
-        <p class="auto-desc">Key stuck in ignition? Ignition switch failing? We repair and replace ignition systems on all vehicles — <span class="kw">quick, professional, affordable</span> ignition repair in Brampton.</p>
+        <div class="auto-name">Ignition Repair & Switch Replacement</div>
+        <p class="auto-desc">Key stuck in ignition? <span class="kw">Ignition switch repairs</span> and full replacements for all vehicles — quick, professional, affordable <span class="kw">ignition repair in Brampton</span>. We come to you.</p>
         <span class="svc-badge">On-Site Repair</span>
       </div>
       <div class="auto-card">
@@ -765,6 +822,110 @@ footer{background:#0F172A;padding:52px 60px 24px;}
           <small>Open 24 hours · Always answered</small>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICE SITUATIONS — blog style ══ -->
+<section class="sec" id="situations">
+  <div class="sec-inner">
+    <div class="sec-label">Common Situations We Handle</div>
+    <h2>We Fix Every Lock <span class="kw">Situation</span></h2>
+    <p class="sec-sub">From key extraction to broken door locks — here's what we deal with every day across Brampton & GTA.</p>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-img">🔑<div class="blog-img-label">Key Extraction</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Automotive</span>
+          <div class="blog-title">Key Stuck or Broken in Lock?</div>
+          <p class="blog-excerpt">Broken key stuck in your car ignition or door lock? Our technicians extract broken keys without damaging your lock — fast, on-site service in Brampton.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🏠<div class="blog-img-label">Residential Lockout</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Residential</span>
+          <div class="blog-title">Locked Out of Your Home?</div>
+          <p class="blog-excerpt">Locked out of your house in Brampton? We provide fast residential lockout service — no damage to your door or frame. 15-minute response, 24/7.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🚗<div class="blog-img-label">Car Lockout</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Automotive</span>
+          <div class="blog-title">Car Lockout in Brampton?</div>
+          <p class="blog-excerpt">Locked your keys inside your car? We unlock all makes and models safely — no damage, no break-in. Emergency car unlock service across Brampton & Mississauga.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🚪<div class="blog-img-label">Broken Door Lock</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Residential / Commercial</span>
+          <div class="blog-title">Broken or Damaged Door Lock?</div>
+          <p class="blog-excerpt">Damaged deadbolt or broken door lock? We repair or replace all types of door locks on the spot — homes, apartments, and commercial properties in Brampton.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🔧<div class="blog-img-label">Faulty Door Lock</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Repair</span>
+          <div class="blog-title">Faulty Door Lock Mechanism?</div>
+          <p class="blog-excerpt">Lock sticking, not turning, or hard to open? Faulty door lock mechanisms are a security risk. We diagnose and fix all lock mechanism issues — same day in Brampton.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🔐<div class="blog-img-label">Ignition Repair</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Automotive</span>
+          <div class="blog-title">Key Stuck in Ignition?</div>
+          <p class="blog-excerpt">Can't remove your key from the ignition? Ignition switch issues can leave you stranded. Our mobile locksmiths handle ignition switch repairs in Brampton — any make, any model.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="sec sec-alt" id="faq">
+  <div class="sec-inner">
+    <div class="sec-label">Frequently Asked Questions</div>
+    <h2>Got Questions? <span class="kw">We've Got Answers.</span></h2>
+    <p class="sec-sub">Everything you need to know about our locksmith services in Brampton.</p>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-q">How fast can you arrive for an emergency lockout in Brampton?</summary>
+        <p class="faq-a">We're based right in Brampton and guarantee a 15-minute average response time for emergency lockouts. Whether you're locked out of your home, car, or business — we're on our way the moment you call. Our 24/7 emergency support means we answer every call, day or night.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Do you provide car locksmith services in Brampton and Mississauga?</summary>
+        <p class="faq-a">Yes — we are a full-service car locksmith in Brampton and Mississauga. We handle emergency car unlocks, auto key programming, transponder key programming, car remote replacement, key cutting service, and ignition switch repairs for all makes and models. We come to you — no towing required.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Can you program transponder keys and car remotes on-site?</summary>
+        <p class="faq-a">Absolutely. We carry professional key programming equipment and can program transponder keys, chip keys, smart keys, and car remotes on-site for virtually all makes and models. Car key programming and replacement is done right at your location — no dealership wait time and at a fraction of the cost.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What does ignition repair in Brampton cost?</summary>
+        <p class="faq-a">We provide upfront, honest pricing before any work begins. Ignition switch repairs and ignition replacement costs vary by vehicle make and model, but we always quote you first — no hidden fees or surprise charges. Call (437) 226-6769 for a free quote on ignition repair in Brampton.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Are you available for 24/7 emergency support?</summary>
+        <p class="faq-a">Yes, 24/7 — including weekends and holidays. We never close. Whether it's 3am or Christmas Day, one call to (437) 226-6769 connects you to a live technician who can be at your location in Brampton within 15 minutes.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Do you rekey locks and offer key cutting service in Brampton?</summary>
+        <p class="faq-a">Yes! We offer fast rekeying for homes and businesses, as well as precision key cutting service in Brampton for car keys, house keys, and commercial keys. Just moved in? Lost a key? We can rekey all your locks the same day so only your new keys work.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Are your locksmiths licensed and insured in Ontario?</summary>
+        <p class="faq-a">Yes. Every technician at 247 Locksmith is licensed, bonded, and fully insured in Ontario. We are background-checked and carry full liability insurance so your home and property are always protected during any service.</p>
+      </details>
     </div>
   </div>
 </section>
