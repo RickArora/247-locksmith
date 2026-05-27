@@ -3,7 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>247 Locksmith — Brampton's 24/7 Emergency Locksmith</title>
+<title>Car Locksmith in Brampton | 247 Locksmith — 24/7 Emergency Locksmith</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="247 Locksmith — Brampton's #1 car locksmith. Quick, professional, affordable automotive locksmith services: emergency car unlock, auto key programming, ignition repair, car remote replacement & key cutting service in Brampton & Mississauga. Call (437) 226-6769 — open 24/7.">
+<meta name="keywords" content="car locksmith brampton, automotive locksmith services, emergency car unlock brampton, emergency car unlock service in brampton, auto key programming brampton, ignition repair brampton, key cutting service brampton, car remote replacement brampton, locked out brampton, 24/7 emergency locksmith, emergency locksmith brampton, quick professional affordable locksmith">
+<meta name="robots" content="index, follow">
+<meta name="author" content="247 Locksmith Brampton">
+<link rel="canonical" href="https://rickarora.github.io/247-locksmith/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rickarora.github.io/247-locksmith/">
+<meta property="og:title" content="Car Locksmith in Brampton | 247 Locksmith — 24/7 Emergency">
+<meta property="og:description" content="Quick, professional, affordable car locksmith in Brampton. Emergency car unlock, auto key programming, ignition repair & car remote replacement. Call (437) 226-6769.">
+<meta property="og:site_name" content="247 Locksmith Brampton">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Car Locksmith in Brampton | 247 Locksmith">
+<meta name="twitter:description" content="Quick, professional, affordable 24/7 car locksmith in Brampton. Emergency car unlock, auto key programming, ignition repair & more. (437) 226-6769.">
+
+<!-- Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "247 Locksmith",
+  "description": "Quick, professional, affordable 24/7 automotive and emergency locksmith services in Brampton and the GTA.",
+  "telephone": "+14372266769",
+  "email": "info.plocks@gmail.com",
+  "url": "https://rickarora.github.io/247-locksmith/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1 Shenstone Ave",
+    "addressLocality": "Brampton",
+    "addressRegion": "ON",
+    "postalCode": "L6Z 2Y6",
+    "addressCountry": "CA"
+  },
+  "openingHours": "Mo-Su 00:00-23:59",
+  "areaServed": ["Brampton","Mississauga","Toronto","Vaughan","Oakville","Caledon","Milton","Burlington","Etobicoke","North York"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Locksmith Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Emergency Car Unlock Brampton"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Auto Key Programming Brampton"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Ignition Repair Brampton"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Car Remote Replacement Brampton"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Key Cutting Service Brampton"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Lockout Brampton"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Locksmith Brampton"}}
+    ]
+  }
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -383,6 +439,30 @@ footer{background:#0F172A;padding:52px 60px 24px;}
 .float:hover{animation:none;transform:scale(1.04);}
 
 /* ════════════════════════════════
+   AUTOMOTIVE SECTION
+════════════════════════════════ */
+.auto-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.auto-card{
+  background:var(--white);border:1px solid var(--border);
+  border-left:4px solid var(--sky);
+  border-radius:12px;padding:24px;
+  transition:all 0.2s;
+}
+.auto-card:hover{box-shadow:0 6px 28px rgba(14,165,233,0.1);transform:translateY(-3px);}
+.auto-em{font-size:26px;margin-bottom:12px;display:block;}
+.auto-name{font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;}
+.auto-desc{font-size:14px;color:var(--muted);line-height:1.6;margin-bottom:14px;}
+.btn-auto-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--sky);color:#fff;
+  padding:16px 36px;border-radius:10px;
+  font-size:16px;font-weight:800;text-decoration:none;
+  box-shadow:0 4px 20px rgba(14,165,233,0.35);
+  transition:all 0.15s;
+}
+.btn-auto-cta:hover{background:var(--sky-dk);transform:translateY(-2px);}
+
+/* ════════════════════════════════
    MOBILE — ≤768px
 ════════════════════════════════ */
 @media(max-width:768px){
@@ -412,6 +492,7 @@ footer{background:#0F172A;padding:52px 60px 24px;}
   /* SERVICES */
   .svc-head{flex-direction:column;align-items:flex-start;gap:12px;}
   .svc-grid{grid-template-columns:1fr;}
+  .auto-grid{grid-template-columns:1fr;}
 
   /* WHY US */
   .why-grid{grid-template-columns:1fr;gap:36px;}
@@ -453,6 +534,7 @@ footer{background:#0F172A;padding:52px 60px 24px;}
   <div class="nav-logo">247 <span>Locksmith</span></div>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#automotive">Automotive</a></li>
     <li><a href="#why">Why Us</a></li>
     <li><a href="#areas">Areas</a></li>
     <li><a href="#reviews">Reviews</a></li>
@@ -472,7 +554,7 @@ footer{background:#0F172A;padding:52px 60px 24px;}
         <span class="h1-green">15 Minutes.</span>
       </h1>
       <p class="hero-sub">
-        <strong>247 Locksmith</strong> — Brampton's trusted <span style="font-weight:700;color:#fff;">24/7 emergency locksmith</span> for homes, cars &amp; businesses. Licensed, insured, always on call.
+        <strong>247 Locksmith</strong> — Brampton's trusted <span style="font-weight:700;color:#fff;">24/7 emergency locksmith</span> for homes, cars &amp; businesses. Quick, professional, affordable — licensed, insured, always on call.
       </p>
       <div class="hero-btns">
         <a href="tel:4372266769" class="btn-white">📞 Call (437) 226-6769 — Free</a>
@@ -483,6 +565,7 @@ footer{background:#0F172A;padding:52px 60px 24px;}
         <div class="t-pill">Open 24/7</div>
         <div class="t-pill">5-Star Rated</div>
         <div class="t-pill">Licensed & Insured</div>
+        <div class="t-pill">Quick · Professional · Affordable</div>
       </div>
     </div>
 
@@ -495,7 +578,7 @@ footer{background:#0F172A;padding:52px 60px 24px;}
       </div>
       <div class="hc-list">
         <div class="hc-row"><span class="icon">🏠</span> Residential Lockouts</div>
-        <div class="hc-row"><span class="icon">🚗</span> Car Key Replacement</div>
+        <div class="hc-row"><span class="icon">🚗</span> Car Locksmith in Brampton</div>
         <div class="hc-row"><span class="icon">🏢</span> Commercial Locks</div>
         <div class="hc-row"><span class="icon">🗝️</span> Rekeying & Key Cutting</div>
         <div class="hc-row"><span class="icon">🔐</span> Safes & Access Control</div>
@@ -519,7 +602,7 @@ footer{background:#0F172A;padding:52px 60px 24px;}
       <div class="svc-card top">
         <span class="svc-em">⚡</span>
         <div class="svc-name">Emergency Lockout</div>
-        <p class="svc-desc">Locked out of your home, car or office? We're at your door in <span class="kw">15 minutes</span> — day or night, 365 days a year.</p>
+        <p class="svc-desc">Locked out of your home, car or office in Brampton? Our <span class="kw">emergency car unlock service</span> and residential lockout response gets you back in fast — <span class="kw">15 minutes</span>, day or night.</p>
         <span class="svc-badge">24/7 Available</span>
       </div>
       <div class="svc-card top">
@@ -530,14 +613,14 @@ footer{background:#0F172A;padding:52px 60px 24px;}
       </div>
       <div class="svc-card top">
         <span class="svc-em">🚗</span>
-        <div class="svc-name">Automotive Key Replacement</div>
-        <p class="svc-desc">Lost car keys or broken fobs? We cut and <span class="kw">program keys on-site</span> for all makes and models — no dealership needed.</p>
-        <span class="svc-badge">All Makes</span>
+        <div class="svc-name">Automotive Locksmith Services</div>
+        <p class="svc-desc">Brampton's trusted <span class="kw">car locksmith</span> — auto key programming, car remote replacement, ignition repair, emergency car unlock &amp; key cutting. Quick, professional, affordable.</p>
+        <span class="svc-badge">All Makes & Models</span>
       </div>
       <div class="svc-card">
         <span class="svc-em">🗝️</span>
-        <div class="svc-name">Rekeying & Key Duplication</div>
-        <p class="svc-desc">Just moved in? Lost a key? We <span class="kw">rekey your locks fast</span> so only your new keys work — affordable, same-day service.</p>
+        <div class="svc-name">Rekeying & Key Cutting Service</div>
+        <p class="svc-desc">Just moved in? Lost a key? We offer <span class="kw">key cutting service in Brampton</span> and fast rekeying — so only your new keys work. Affordable, same-day service.</p>
         <span class="svc-badge">Same Day</span>
       </div>
       <div class="svc-card">
@@ -552,6 +635,60 @@ footer{background:#0F172A;padding:52px 60px 24px;}
         <p class="svc-desc">Safe installation, <span class="kw">combination changes</span>, lockouts, and smart access control setup for homes and offices.</p>
         <span class="svc-badge">Advanced Security</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ AUTOMOTIVE LOCKSMITH SERVICES ══ -->
+<section class="sec sec-alt" id="automotive">
+  <div class="sec-inner">
+    <div class="svc-head">
+      <div>
+        <div class="sec-label">Car Locksmith in Brampton & Mississauga</div>
+        <h2>Automotive Locksmith <span class="kw">Services</span></h2>
+      </div>
+      <p class="sec-sub">Locked out of your car? Lost your keys? Fast, affordable automotive locksmith services in Brampton — no dealership required.</p>
+    </div>
+    <div class="auto-grid">
+      <div class="auto-card">
+        <span class="auto-em">🔑</span>
+        <div class="auto-name">Auto Key Programming</div>
+        <p class="auto-desc">We program transponder keys, chip keys, and smart keys on-site for all makes and models. <span class="kw">Auto key programming in Brampton</span> at a fraction of dealership cost.</p>
+        <span class="svc-badge">All Makes & Models</span>
+      </div>
+      <div class="auto-card">
+        <span class="auto-em">🚗</span>
+        <div class="auto-name">Emergency Car Unlock</div>
+        <p class="auto-desc">Locked out of your car in Brampton or Mississauga? Our <span class="kw">emergency car unlock service</span> arrives in 15 minutes — available 24/7, any vehicle, any location.</p>
+        <span class="svc-badge">24/7 Emergency</span>
+      </div>
+      <div class="auto-card">
+        <span class="auto-em">🔧</span>
+        <div class="auto-name">Ignition Repair Brampton</div>
+        <p class="auto-desc">Key stuck in ignition? Ignition switch failing? We repair and replace ignition systems on all vehicles — <span class="kw">quick, professional, affordable</span> ignition repair in Brampton.</p>
+        <span class="svc-badge">On-Site Repair</span>
+      </div>
+      <div class="auto-card">
+        <span class="auto-em">📡</span>
+        <div class="auto-name">Car Remote Replacement</div>
+        <p class="auto-desc">Lost or broken car remote? We supply and program replacement remotes and key fobs for all vehicles. <span class="kw">Car remote replacement in Brampton</span> — same day service.</p>
+        <span class="svc-badge">Same Day</span>
+      </div>
+      <div class="auto-card">
+        <span class="auto-em">✂️</span>
+        <div class="auto-name">Key Cutting Service Brampton</div>
+        <p class="auto-desc">Need a spare key cut? Precision <span class="kw">key cutting service in Brampton</span> for car, house, and commercial keys — quick turnaround, affordable prices, walk-ins welcome.</p>
+        <span class="svc-badge">Walk-In Welcome</span>
+      </div>
+      <div class="auto-card">
+        <span class="auto-em">🚐</span>
+        <div class="auto-name">Truck & Van Lockouts</div>
+        <p class="auto-desc">Locked out of your truck or van? We handle all vehicle types — cars, SUVs, trucks, and vans. Fast <span class="kw">emergency car unlock service in Brampton</span> and across the GTA.</p>
+        <span class="svc-badge">All Vehicles</span>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="tel:4372266769" class="btn-auto-cta">📞 Call Your Car Locksmith Now — (437) 226-6769</a>
     </div>
   </div>
 </section>
@@ -760,10 +897,11 @@ footer{background:#0F172A;padding:52px 60px 24px;}
         <h4>Services</h4>
         <ul>
           <li><a href="#services">Emergency Lockout</a></li>
-          <li><a href="#services">Lock Installation</a></li>
-          <li><a href="#services">Car Key Replacement</a></li>
-          <li><a href="#services">Rekeying</a></li>
-          <li><a href="#services">Safe Services</a></li>
+          <li><a href="#automotive">Car Locksmith Brampton</a></li>
+          <li><a href="#automotive">Auto Key Programming</a></li>
+          <li><a href="#automotive">Ignition Repair</a></li>
+          <li><a href="#automotive">Car Remote Replacement</a></li>
+          <li><a href="#automotive">Key Cutting Service</a></li>
         </ul>
       </div>
       <div class="fcol">
