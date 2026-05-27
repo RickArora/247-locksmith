@@ -7,7 +7,7 @@
 
 <!-- SEO Meta Tags -->
 <meta name="description" content="247 Locksmith — Brampton's #1 car locksmith. Quick, professional, affordable automotive locksmith services: emergency car unlock, auto key programming, ignition repair, car remote replacement & key cutting service in Brampton & Mississauga. Call (437) 226-6769 — open 24/7.">
-<meta name="keywords" content="car locksmith brampton, automotive locksmith services, emergency car unlock brampton, emergency car unlock service in brampton, auto key programming brampton, ignition repair brampton, key cutting service brampton, car remote replacement brampton, locked out brampton, 24/7 emergency locksmith, emergency locksmith brampton, quick professional affordable locksmith">
+<meta name="keywords" content="car locksmith brampton, automotive locksmith services, emergency car unlock brampton, emergency car unlock service in brampton, auto key programming brampton, ignition repair brampton, ignition switch repair brampton, key cutting service brampton, car remote replacement brampton, locked out brampton, 24/7 emergency locksmith brampton, emergency locksmith brampton, quick professional affordable locksmith, key stuck in ignition brampton, car key inside help brampton, truck door unlocks brampton, battery dead jump start brampton, spare keys lost key replacement brampton, car key copying brampton, commercial lockouts brampton, residential lockouts brampton, brampton emergency lockouts, transponder key programming brampton, mobile locksmith brampton, change door lock brampton">
 <meta name="robots" content="index, follow">
 <meta name="author" content="247 Locksmith Brampton">
 <link rel="canonical" href="https://rickarora.github.io/247-locksmith/">
@@ -32,7 +32,7 @@
   "name": "247 Locksmith",
   "description": "Quick, professional, affordable 24/7 automotive and emergency locksmith services in Brampton and the GTA.",
   "telephone": "+14372266769",
-  "email": "info.plocks@gmail.com",
+  "email": "Info@24x7locksmithbrampton.com",
   "url": "https://rickarora.github.io/247-locksmith/",
   "address": {
     "@type": "PostalAddress",
@@ -60,6 +60,8 @@
 }
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -519,6 +521,79 @@ details[open] .faq-q::after{transform:rotate(45deg);}
 .btn-auto-cta:hover{background:var(--sky-dk);transform:translateY(-2px);}
 
 /* ════════════════════════════════
+   EXTENDED SERVICES GRID
+════════════════════════════════ */
+.ext-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px;}
+.ext-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:10px;padding:18px 16px;text-align:center;
+  transition:all 0.2s;text-decoration:none;display:block;
+}
+.ext-card:hover{border-color:var(--sky);box-shadow:0 4px 20px rgba(14,165,233,0.1);transform:translateY(-2px);}
+.ext-em{font-size:28px;margin-bottom:8px;display:block;}
+.ext-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;line-height:1.3;}
+.ext-desc{font-size:12px;color:var(--muted);line-height:1.5;}
+
+/* ════════════════════════════════
+   YOUTUBE SECTION
+════════════════════════════════ */
+.yt-wrap{
+  margin-top:36px;
+  border-radius:16px;overflow:hidden;
+  box-shadow:0 8px 40px rgba(0,0,0,0.15);
+  max-width:840px;margin-left:auto;margin-right:auto;
+  aspect-ratio:16/9;background:#000;
+}
+.yt-wrap iframe{width:100%;height:100%;border:none;display:block;}
+.yt-placeholder{
+  width:100%;height:100%;min-height:320px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#111827 0%,#1e293b 100%);
+  color:rgba(255,255,255,0.5);gap:14px;padding:24px;text-align:center;
+}
+.yt-placeholder .yt-icon{font-size:52px;}
+.yt-placeholder p{font-size:14px;max-width:340px;line-height:1.6;}
+.yt-placeholder a{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#FF0000;color:#fff;padding:11px 24px;
+  border-radius:8px;font-size:14px;font-weight:700;
+  text-decoration:none;margin-top:4px;
+}
+
+/* ════════════════════════════════
+   MAP SECTION
+════════════════════════════════ */
+.map-wrap{
+  margin-top:36px;border-radius:16px;overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,0.1);height:420px;
+}
+.map-wrap iframe{width:100%;height:100%;border:none;display:block;}
+
+/* ════════════════════════════════
+   WHATSAPP FLOAT + SOCIAL LINKS
+════════════════════════════════ */
+.float-wa{
+  position:fixed;bottom:90px;right:22px;z-index:999;
+  display:flex;align-items:center;gap:9px;
+  background:#25D366;color:#fff;
+  padding:13px 22px;border-radius:100px;
+  font-size:15px;font-weight:800;text-decoration:none;
+  box-shadow:0 6px 24px rgba(37,211,102,0.45);
+  animation:bob 3s ease-in-out infinite;animation-delay:0.8s;
+}
+.float-wa:hover{animation:none;transform:scale(1.04);}
+
+.social-links{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.social-link{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:7px 13px;border-radius:8px;
+  background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.65);text-decoration:none;
+  font-size:12px;font-weight:600;transition:all 0.15s;
+}
+.social-link:hover{background:var(--sky);border-color:var(--sky);color:#fff;}
+
+/* ════════════════════════════════
    MOBILE — ≤768px
 ════════════════════════════════ */
 @media(max-width:768px){
@@ -569,8 +644,15 @@ details[open] .faq-q::after{transform:rotate(45deg);}
   .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
   .footer-bot{flex-direction:column;gap:6px;text-align:center;}
 
-  /* FLOATING BTN */
+  /* FLOATING BTNS */
   .float{padding:11px 18px;font-size:14px;bottom:16px;right:16px;}
+  .float-wa{padding:11px 16px;font-size:13px;bottom:76px;right:16px;}
+
+  /* EXTENDED GRID */
+  .ext-grid{grid-template-columns:repeat(2,1fr);}
+
+  /* MAP */
+  .map-wrap{height:300px;}
 }
 
 /* ════════════════════════════════
@@ -634,11 +716,11 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         <div class="hc-label">Average arrival in Brampton</div>
       </div>
       <div class="hc-list">
-        <div class="hc-row"><span class="icon">🏠</span> Residential Lockouts</div>
-        <div class="hc-row"><span class="icon">🚗</span> Car Locksmith in Brampton</div>
-        <div class="hc-row"><span class="icon">🏢</span> Commercial Locks</div>
-        <div class="hc-row"><span class="icon">🗝️</span> Rekeying & Key Cutting</div>
-        <div class="hc-row"><span class="icon">🔐</span> Safes & Access Control</div>
+        <a href="#services" class="hc-row" style="text-decoration:none;color:inherit;"><span class="icon">🏠</span> Residential Lockouts</a>
+        <a href="#automotive" class="hc-row" style="text-decoration:none;color:inherit;"><span class="icon">🚗</span> Car Locksmith in Brampton</a>
+        <a href="#services" class="hc-row" style="text-decoration:none;color:inherit;"><span class="icon">🏢</span> Commercial Locks</a>
+        <a href="#automotive" class="hc-row" style="text-decoration:none;color:inherit;"><span class="icon">🗝️</span> Rekeying & Key Cutting</a>
+        <a href="#more-services" class="hc-row" style="text-decoration:none;color:inherit;"><span class="icon">🔐</span> Safes & Access Control</a>
       </div>
       <a href="tel:4372266769" class="hc-btn">Call Now — (437) 226-6769</a>
     </div>
@@ -746,6 +828,80 @@ details[open] .faq-q::after{transform:rotate(45deg);}
     </div>
     <div style="text-align:center;margin-top:36px;">
       <a href="tel:4372266769" class="btn-auto-cta">📞 Call Your Car Locksmith Now — (437) 226-6769</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EXTENDED SERVICES (items 32-40) ══ -->
+<section class="sec" id="more-services">
+  <div class="sec-inner">
+    <div class="sec-label">Everything We Handle</div>
+    <h2><span class="kw">Brampton Emergency Lockouts</span> & More</h2>
+    <p class="sec-sub">From dead batteries to commercial lockouts — one call handles it all, 24/7 across Brampton & GTA.</p>
+    <div class="ext-grid">
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">🔑</span>
+        <div class="ext-name">Key Stuck in Ignition</div>
+        <p class="ext-desc">Key extraction & ignition repair — Brampton, on-site</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">🚗</span>
+        <div class="ext-name">Car Key Inside? We Help!</div>
+        <p class="ext-desc">Keys locked inside your car — we unlock any make or model</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">🚛</span>
+        <div class="ext-name">Truck Door Unlocks</div>
+        <p class="ext-desc">Trucks, vans & commercial vehicles — all unlocked fast</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">⚡</span>
+        <div class="ext-name">Emergency Car Unlock</div>
+        <p class="ext-desc">Cars opened — 24/7 emergency unlock service in Brampton</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">🔋</span>
+        <div class="ext-name">Battery Dead / Jump Start</div>
+        <p class="ext-desc">Stranded with a dead battery? We'll get you going fast</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">🗝️</span>
+        <div class="ext-name">Spare Keys & Lost Key Replacement</div>
+        <p class="ext-desc">Lost your keys? Same-day spare key replacement, any vehicle</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">✂️</span>
+        <div class="ext-name">Car Key Copying</div>
+        <p class="ext-desc">Affordable car key copying for all makes & models</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">🏢</span>
+        <div class="ext-name">Commercial Lockouts</div>
+        <p class="ext-desc">Locked out of your business? Fast commercial lockout service</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">🏠</span>
+        <div class="ext-name">Residential Lockouts</div>
+        <p class="ext-desc">Home lockouts in Brampton — there in 15 minutes, 24/7</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">🆘</span>
+        <div class="ext-name">Brampton Emergency Lockouts</div>
+        <p class="ext-desc">24/7 emergency lockout service anywhere in Brampton</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">🔐</span>
+        <div class="ext-name">Change Door Lock Brampton</div>
+        <p class="ext-desc">Fast door lock changes for homes & businesses</p>
+      </a>
+      <a href="#contact" class="ext-card">
+        <span class="ext-em">📱</span>
+        <div class="ext-name">Mobile Locksmith Brampton</div>
+        <p class="ext-desc">We come to you — anywhere in Brampton & GTA, any time</p>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="tel:4372266769" class="btn-auto-cta">📞 Call for Any of These Services — (437) 226-6769</a>
     </div>
   </div>
 </section>
@@ -887,6 +1043,15 @@ details[open] .faq-q::after{transform:rotate(45deg);}
           <a href="#contact" class="blog-link">Get Help Now →</a>
         </div>
       </div>
+      <div class="blog-card">
+        <div class="blog-img">🚛<div class="blog-img-label">Truck Lockout</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Automotive</span>
+          <div class="blog-title">Truck or Van Locked Out?</div>
+          <p class="blog-excerpt">Locked out of your pickup truck, cargo van, or commercial vehicle in Brampton? We unlock all vehicle types — cars, SUVs, trucks, and vans — fast, damage-free, 24/7.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -941,12 +1106,22 @@ details[open] .faq-q::after{transform:rotate(45deg);}
       <div class="area"><div class="area-n">Mississauga</div><div class="area-d">10 min</div></div>
       <div class="area"><div class="area-n">Toronto</div><div class="area-d">All areas</div></div>
       <div class="area"><div class="area-n">Etobicoke</div><div class="area-d">20 min</div></div>
+      <div class="area"><div class="area-n">North York</div><div class="area-d">25 min</div></div>
       <div class="area"><div class="area-n">Vaughan</div><div class="area-d">15 min</div></div>
+      <div class="area"><div class="area-n">Woodbridge</div><div class="area-d">18 min</div></div>
       <div class="area"><div class="area-n">Caledon</div><div class="area-d">20 min</div></div>
+      <div class="area"><div class="area-n">Bolton</div><div class="area-d">22 min</div></div>
+      <div class="area"><div class="area-n">Georgetown</div><div class="area-d">25 min</div></div>
+      <div class="area"><div class="area-n">Halton Hills</div><div class="area-d">25 min</div></div>
       <div class="area"><div class="area-n">Milton</div><div class="area-d">25 min</div></div>
       <div class="area"><div class="area-n">Oakville</div><div class="area-d">30 min</div></div>
       <div class="area"><div class="area-n">Burlington</div><div class="area-d">35 min</div></div>
-      <div class="area"><div class="area-n">North York</div><div class="area-d">25 min</div></div>
+      <div class="area"><div class="area-n">Hamilton</div><div class="area-d">45 min</div></div>
+      <div class="area"><div class="area-n">Scarborough</div><div class="area-d">30 min</div></div>
+      <div class="area"><div class="area-n">Markham</div><div class="area-d">35 min</div></div>
+      <div class="area"><div class="area-n">Richmond Hill</div><div class="area-d">30 min</div></div>
+      <div class="area"><div class="area-n">Pickering</div><div class="area-d">40 min</div></div>
+      <div class="area"><div class="area-n">Ajax</div><div class="area-d">45 min</div></div>
     </div>
   </div>
 </section>
@@ -986,6 +1161,45 @@ details[open] .faq-q::after{transform:rotate(45deg);}
   </div>
 </section>
 
+<!-- ══ YOUTUBE VIDEO (item 26) ══ -->
+<section class="sec sec-alt" id="video">
+  <div class="sec-inner" style="text-align:center;">
+    <div class="sec-label">See Us In Action</div>
+    <h2>Watch How We <span class="kw">Work</span></h2>
+    <p class="sec-sub" style="margin:0 auto 0;">See why Brampton homeowners &amp; drivers trust 247 Locksmith for every emergency.</p>
+    <div class="yt-wrap">
+      <!-- ✏️ OWNER: Replace VIDEO_ID below with your YouTube video ID -->
+      <!-- e.g. youtube.com/watch?v=ABC123XYZ → VIDEO_ID = ABC123XYZ -->
+      <div class="yt-placeholder">
+        <div class="yt-icon">▶️</div>
+        <p>Add your YouTube video here — paste your video ID into the code below, or send us the link.</p>
+        <a href="https://www.youtube.com/@247locksmithbrampton" target="_blank" rel="noopener">Visit Our YouTube Channel →</a>
+      </div>
+      <!-- Uncomment & replace VIDEO_ID when ready:
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="247 Locksmith Brampton — How We Work" allowfullscreen loading="lazy"></iframe>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- ══ MAP (item 31) ══ -->
+<section class="sec" id="map">
+  <div class="sec-inner">
+    <div class="sec-label">Find Us</div>
+    <h2>Based in <span class="kw">Brampton</span>, Serving All of GTA</h2>
+    <p class="sec-sub">1 Shenstone Ave, Brampton ON — we travel across the GTA for every emergency locksmith call.</p>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=1+Shenstone+Ave,+Brampton,+ON+L6Z+2Y6&output=embed"
+        title="247 Locksmith Brampton — Service Location"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
 <!-- ══ CONTACT — surface ══ -->
 <section class="sec sec-alt" id="contact">
   <div class="sec-inner">
@@ -1000,9 +1214,9 @@ details[open] .faq-q::after{transform:rotate(45deg);}
             <div class="cm-body"><strong>(437) 226-6769</strong><span>Call or text — answered 24/7</span></div>
             <div class="cm-arr">›</div>
           </a>
-          <a href="mailto:info.plocks@gmail.com" class="cm">
+          <a href="mailto:Info@24x7locksmithbrampton.com" class="cm">
             <div class="cm-icon">✉️</div>
-            <div class="cm-body"><strong>info.plocks@gmail.com</strong><span>Email — reply within 1 hour</span></div>
+            <div class="cm-body"><strong>Info@24x7locksmithbrampton.com</strong><span>Email — reply within 1 hour</span></div>
             <div class="cm-arr">›</div>
           </a>
           <div class="cm">
@@ -1029,10 +1243,23 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         <div class="fg">
           <label>Service Needed</label>
           <select>
-            <option>Emergency Lockout</option>
+            <option>Emergency Lockout — Brampton</option>
+            <option>Car Lockout / Emergency Car Unlock</option>
+            <option>Truck / Van Lockout</option>
+            <option>Auto Key Programming</option>
+            <option>Transponder Key Programming</option>
+            <option>Car Remote Replacement</option>
+            <option>Key Stuck in Ignition</option>
+            <option>Ignition Repair / Switch Replacement</option>
+            <option>Car Key Copying</option>
+            <option>Spare Key / Lost Key Replacement</option>
+            <option>Battery Dead / Jump Start</option>
+            <option>Key Cutting Service</option>
             <option>Lock Installation / Repair</option>
-            <option>Car Key Replacement</option>
+            <option>Change Door Lock</option>
             <option>Rekeying</option>
+            <option>Commercial Lockout</option>
+            <option>Residential Lockout</option>
             <option>Safe Services</option>
             <option>Other</option>
           </select>
@@ -1053,6 +1280,12 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         <div class="flogo">247 <span>Locksmith</span></div>
         <p class="fdesc">Brampton's trusted 24/7 emergency locksmith. Licensed, insured, and committed to fast, honest service across the GTA.</p>
         <a href="tel:4372266769" class="fphone">(437) 226-6769</a>
+        <div class="social-links">
+          <!-- ✏️ Update these URLs with your actual social pages -->
+          <a href="https://www.instagram.com/247locksmithbrampton" target="_blank" rel="noopener" class="social-link">📸 Instagram</a>
+          <a href="https://www.tiktok.com/@247locksmithbrampton" target="_blank" rel="noopener" class="social-link">🎵 TikTok</a>
+          <a href="https://www.facebook.com/247locksmithbrampton" target="_blank" rel="noopener" class="social-link">📘 Facebook</a>
+        </div>
       </div>
       <div class="fcol">
         <h4>Services</h4>
@@ -1061,8 +1294,9 @@ details[open] .faq-q::after{transform:rotate(45deg);}
           <li><a href="#automotive">Car Locksmith Brampton</a></li>
           <li><a href="#automotive">Auto Key Programming</a></li>
           <li><a href="#automotive">Ignition Repair</a></li>
-          <li><a href="#automotive">Car Remote Replacement</a></li>
-          <li><a href="#automotive">Key Cutting Service</a></li>
+          <li><a href="#more-services">Battery / Jump Start</a></li>
+          <li><a href="#more-services">Spare Key Replacement</a></li>
+          <li><a href="#more-services">Commercial Lockouts</a></li>
         </ul>
       </div>
       <div class="fcol">
@@ -1079,8 +1313,10 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         <h4>Company</h4>
         <ul>
           <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#map">Our Location</a></li>
+          <li><a href="#contact">Book a Service</a></li>
           <li><a href="tel:4372266769">Call Now</a></li>
         </ul>
       </div>
@@ -1092,6 +1328,7 @@ details[open] .faq-q::after{transform:rotate(45deg);}
   </div>
 </footer>
 
+<a href="https://wa.me/14372266769?text=Hi!%20I%20need%20locksmith%20help%20in%20Brampton." class="float-wa" target="_blank" rel="noopener">💬 WhatsApp Us</a>
 <a href="tel:4372266769" class="float">📞 (437) 226-6769</a>
 
 <script>
