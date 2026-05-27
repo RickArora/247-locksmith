@@ -381,6 +381,69 @@ footer{background:#0F172A;padding:52px 60px 24px;}
 }
 @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
 .float:hover{animation:none;transform:scale(1.04);}
+
+/* ════════════════════════════════
+   MOBILE — ≤768px
+════════════════════════════════ */
+@media(max-width:768px){
+
+  /* NAV */
+  nav{padding:0 20px;height:58px;}
+  .nav-links{display:none;}
+  .nav-cta{padding:8px 14px;font-size:13px;}
+
+  /* HERO */
+  .hero{padding:48px 20px 56px;}
+  .hero-inner{grid-template-columns:1fr;gap:32px;}
+  h1{font-size:38px;}
+  .hero-sub{font-size:15px;}
+  .btn-white{padding:14px 22px;font-size:15px;}
+  .btn-ghost{padding:13px 20px;font-size:14px;}
+  .hero-trust{gap:8px;}
+  .t-pill{font-size:12px;padding:6px 11px;}
+
+  /* HERO CARD */
+  .hero-card{padding:22px;}
+  .hc-num{font-size:52px;}
+
+  /* SECTIONS */
+  .sec{padding:52px 20px;}
+
+  /* SERVICES */
+  .svc-head{flex-direction:column;align-items:flex-start;gap:12px;}
+  .svc-grid{grid-template-columns:1fr;}
+
+  /* WHY US */
+  .why-grid{grid-template-columns:1fr;gap:36px;}
+
+  /* AREAS */
+  .areas-grid{grid-template-columns:repeat(2,1fr);}
+
+  /* REVIEWS */
+  .reviews-grid{grid-template-columns:1fr;}
+
+  /* CONTACT */
+  .contact-grid{grid-template-columns:1fr;gap:36px;}
+  .frow{grid-template-columns:1fr;}
+
+  /* FOOTER */
+  footer{padding:40px 20px 20px;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
+  .footer-bot{flex-direction:column;gap:6px;text-align:center;}
+
+  /* FLOATING BTN */
+  .float{padding:11px 18px;font-size:14px;bottom:16px;right:16px;}
+}
+
+/* ════════════════════════════════
+   SMALL PHONES — ≤480px
+════════════════════════════════ */
+@media(max-width:480px){
+  .footer-top{grid-template-columns:1fr;}
+  .areas-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-btns{flex-direction:column;}
+  .btn-white,.btn-ghost{width:100%;justify-content:center;}
+}
 </style>
 </head>
 <body>
