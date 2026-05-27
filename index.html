@@ -7,7 +7,14 @@
 
 <!-- SEO Meta Tags -->
 <meta name="description" content="247 Locksmith — Brampton's #1 car locksmith. Quick, professional, affordable automotive locksmith services: emergency car unlock, auto key programming, ignition repair, car remote replacement & key cutting service in Brampton & Mississauga. Call (437) 226-6769 — open 24/7.">
-<meta name="keywords" content="car locksmith brampton, automotive locksmith services, emergency car unlock brampton, emergency car unlock service in brampton, auto key programming brampton, ignition repair brampton, ignition switch repair brampton, key cutting service brampton, car remote replacement brampton, locked out brampton, 24/7 emergency locksmith brampton, emergency locksmith brampton, quick professional affordable locksmith, key stuck in ignition brampton, car key inside help brampton, truck door unlocks brampton, battery dead jump start brampton, spare keys lost key replacement brampton, car key copying brampton, commercial lockouts brampton, residential lockouts brampton, brampton emergency lockouts, transponder key programming brampton, mobile locksmith brampton, change door lock brampton">
+<meta name="keywords" content="locksmith brampton, emergency locksmith brampton, car locksmith brampton, automotive locksmith brampton, auto locksmith services brampton, brampton expert locksmiths, brampton affordable locksmith services, brampton cheap locksmith, emergency car unlock brampton, emergency car unlock service in brampton, auto key programming brampton, ignition repair brampton, ignition switch repair brampton, key cutting service brampton, car remote replacement brampton, locked out brampton, car locked brampton, 24/7 locksmith brampton, emergency locksmith, emergency lockout brampton, mobile locksmith brampton, change door lock brampton, lock repair brampton, lock install brampton, lock rekey brampton, stuck key removal brampton, fuel delivery brampton, road emergency brampton, brampton commercial locksmith, residential lockouts brampton, commercial lockouts brampton, brampton emergency lockouts, transponder key programming brampton, spare keys lost key replacement brampton, car key copying brampton, battery dead jump start brampton, automotive locksmith services, car locksmith">
+<meta name="contact" content="(437) 226-6769 | Info@24x7locksmithbrampton.com | Open 24/7">
+<meta property="og:phone_number" content="+14372266769">
+<meta property="business:contact_data:phone_number" content="+14372266769">
+<meta property="business:contact_data:email" content="Info@24x7locksmithbrampton.com">
+<meta property="business:contact_data:locality" content="Brampton">
+<meta property="business:contact_data:region" content="Ontario">
+<meta property="business:contact_data:country_name" content="Canada">
 <meta name="robots" content="index, follow">
 <meta name="author" content="247 Locksmith Brampton">
 <link rel="canonical" href="https://rickarora.github.io/247-locksmith/">
@@ -521,6 +528,92 @@ details[open] .faq-q::after{transform:rotate(45deg);}
 .btn-auto-cta:hover{background:var(--sky-dk);transform:translateY(-2px);}
 
 /* ════════════════════════════════
+   TICKER STRIP
+════════════════════════════════ */
+.ticker-wrap{
+  background:var(--sky-dk);overflow:hidden;
+  padding:9px 0;white-space:nowrap;user-select:none;
+}
+.ticker{
+  display:inline-flex;gap:52px;
+  animation:ticker 32s linear infinite;
+}
+.ticker:hover{animation-play-state:paused;}
+.ticker span{
+  color:rgba(255,255,255,0.92);
+  font-size:13px;font-weight:600;letter-spacing:0.04em;flex-shrink:0;
+}
+@keyframes ticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ════════════════════════════════
+   HOW IT WORKS
+════════════════════════════════ */
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px;position:relative;}
+.how-grid::before{
+  content:'';position:absolute;top:38px;left:18%;right:18%;height:2px;
+  background:linear-gradient(90deg,var(--sky-lt),var(--sky),var(--sky-lt));
+  z-index:0;
+}
+.how-card{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:14px;padding:30px 22px;text-align:center;
+  position:relative;z-index:1;transition:all 0.2s;
+}
+.how-card:hover{box-shadow:0 6px 28px rgba(14,165,233,0.1);transform:translateY(-3px);}
+.how-num{
+  width:58px;height:58px;border-radius:50%;
+  background:var(--sky);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;font-weight:900;margin:0 auto 16px;
+  box-shadow:0 4px 16px rgba(14,165,233,0.35);
+}
+.how-title{font-size:16px;font-weight:800;color:var(--text);margin-bottom:8px;}
+.how-desc{font-size:14px;color:var(--muted);line-height:1.65;}
+
+/* ════════════════════════════════
+   SERVICE SLIDER (Esther style)
+════════════════════════════════ */
+.slider-wrap{position:relative;margin-top:36px;}
+.slides-container{
+  background:var(--white);border:1px solid var(--border);
+  border-radius:16px;padding:52px 48px;
+  min-height:260px;
+  box-shadow:0 4px 24px rgba(0,0,0,0.06);
+}
+.slide{display:none;text-align:center;animation:fadeSlide 0.45s ease;}
+.slide.active{display:block;}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.slide-em{font-size:52px;margin-bottom:14px;display:block;}
+.slide-title{font-size:24px;font-weight:900;color:var(--text);margin-bottom:12px;letter-spacing:-0.025em;}
+.slide-desc{font-size:15px;color:var(--muted);line-height:1.7;max-width:600px;margin:0 auto 24px;}
+.slide-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--sky);color:#fff;
+  padding:13px 30px;border-radius:8px;
+  font-size:14px;font-weight:700;text-decoration:none;
+  box-shadow:0 3px 12px rgba(14,165,233,0.3);
+  transition:all 0.15s;
+}
+.slide-cta:hover{background:var(--sky-dk);transform:translateY(-1px);}
+.slide-dots{display:flex;justify-content:center;gap:8px;margin-top:22px;}
+.slide-dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--border);border:none;cursor:pointer;
+  transition:all 0.2s;padding:0;
+}
+.slide-dot.active{background:var(--sky);transform:scale(1.3);}
+.slide-nav{
+  display:flex;justify-content:center;gap:12px;margin-top:14px;
+}
+.slide-prev,.slide-next{
+  background:var(--sky-lt);border:1px solid #BAE6FD;
+  color:var(--sky-dk);border-radius:8px;
+  padding:8px 18px;font-size:16px;font-weight:700;
+  cursor:pointer;transition:all 0.15s;
+}
+.slide-prev:hover,.slide-next:hover{background:var(--sky);color:#fff;}
+
+/* ════════════════════════════════
    EXTENDED SERVICES GRID
 ════════════════════════════════ */
 .ext-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:36px;}
@@ -651,6 +744,15 @@ details[open] .faq-q::after{transform:rotate(45deg);}
   /* EXTENDED GRID */
   .ext-grid{grid-template-columns:repeat(2,1fr);}
 
+  /* HOW IT WORKS */
+  .how-grid{grid-template-columns:1fr;}
+  .how-grid::before{display:none;}
+
+  /* SLIDER */
+  .slides-container{padding:32px 20px;}
+  .slide-title{font-size:19px;}
+  .slide-desc{font-size:14px;}
+
   /* MAP */
   .map-wrap{height:300px;}
 }
@@ -682,11 +784,37 @@ details[open] .faq-q::after{transform:rotate(45deg);}
   <a href="tel:4372266769" class="nav-cta">📞 (437) 226-6769</a>
 </nav>
 
+<!-- TICKER STRIP -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker">
+    <span>⚡ Emergency Locksmith Brampton</span>
+    <span>🚗 Car Locksmith Brampton</span>
+    <span>🔑 Auto Key Programming</span>
+    <span>🏠 Residential Lockouts</span>
+    <span>🔧 Ignition Repair Brampton</span>
+    <span>🚛 Truck Door Unlocks</span>
+    <span>💰 Affordable Locksmith Brampton</span>
+    <span>✂️ Key Cutting & Stuck Key Removal</span>
+    <span>🔐 Change Door Lock Brampton</span>
+    <span>📞 (437) 226-6769 — Open 24/7</span>
+    <span>⚡ Emergency Locksmith Brampton</span>
+    <span>🚗 Car Locksmith Brampton</span>
+    <span>🔑 Auto Key Programming</span>
+    <span>🏠 Residential Lockouts</span>
+    <span>🔧 Ignition Repair Brampton</span>
+    <span>🚛 Truck Door Unlocks</span>
+    <span>💰 Affordable Locksmith Brampton</span>
+    <span>✂️ Key Cutting & Stuck Key Removal</span>
+    <span>🔐 Change Door Lock Brampton</span>
+    <span>📞 (437) 226-6769 — Open 24/7</span>
+  </div>
+</div>
+
 <!-- ══ HERO — sky blue ══ -->
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">Brampton's #1 Rated Locksmith</div>
+      <div class="hero-badge">Brampton's Expert Locksmiths · Affordable & Fast</div>
       <h1>
         Locked Out?<br>
         We Arrive in<br>
@@ -727,6 +855,32 @@ details[open] .faq-q::after{transform:rotate(45deg);}
   </div>
 </section>
 
+<!-- ══ HOW IT WORKS (Spectrum-inspired) ══ -->
+<section class="sec sec-alt" id="how-it-works">
+  <div class="sec-inner">
+    <div class="sec-label">Simple Process</div>
+    <h2>How It <span class="kw">Works</span></h2>
+    <p class="sec-sub">Getting help from Brampton's expert locksmiths takes just 3 steps.</p>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">1</div>
+        <div class="how-title">📞 Call or WhatsApp</div>
+        <p class="how-desc">Call <a href="tel:4372266769" style="color:var(--sky);font-weight:700;">(437) 226-6769</a> or WhatsApp us any time — 24/7, 365 days. Describe your situation and get an upfront price instantly. No hidden fees.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">2</div>
+        <div class="how-title">🚗 We Come to You</div>
+        <p class="how-desc">Our mobile locksmith drives to your exact location in Brampton in <strong>15 minutes or less</strong>. No towing, no waiting at a shop — we handle everything on-site.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">3</div>
+        <div class="how-title">✅ Back In Business</div>
+        <p class="how-desc">We unlock your car, replace your keys, repair your ignition, or fix your lock right there. Quick, professional, affordable — <strong>you pay and you're on your way.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══ SERVICES — white ══ -->
 <section class="sec" id="services">
   <div class="sec-inner">
@@ -746,8 +900,8 @@ details[open] .faq-q::after{transform:rotate(45deg);}
       </div>
       <div class="svc-card top">
         <span class="svc-em">🔧</span>
-        <div class="svc-name">Lock Installation & Repair</div>
-        <p class="svc-desc">New deadbolts, <span class="kw">smart locks</span>, or repair of damaged locks — installed with a full warranty on all parts and labour.</p>
+        <div class="svc-name">Lock Repair, Install & Rekey</div>
+        <p class="svc-desc"><span class="kw">Lock repair, lock installation, lock rekey</span> — new deadbolts, smart locks, or change door lock in Brampton. Full warranty on all parts and labour.</p>
         <span class="svc-badge">Residential</span>
       </div>
       <div class="svc-card top">
@@ -924,8 +1078,8 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         <div class="why-item">
           <div class="wi-num">2</div>
           <div class="wi-body">
-            <h4><span class="kw">Upfront Pricing</span> — No Surprises</h4>
-            <p>We quote you before we start. What we say is what you pay. No hidden fees or inflated emergency surcharges.</p>
+            <h4><span class="kw">Affordable Locksmith</span> — No Surprises</h4>
+            <p>Brampton's most affordable locksmith services — we quote you before we start. What we say is what you pay. No hidden fees, no inflated charges. <span class="kw">Cheap locksmith prices</span>, professional quality.</p>
           </div>
         </div>
         <div class="why-item">
@@ -977,6 +1131,60 @@ details[open] .faq-q::after{transform:rotate(45deg);}
           <a href="tel:4372266769">(437) 226-6769</a>
           <small>Open 24 hours · Always answered</small>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICE SLIDER — Esther style ══ -->
+<section class="sec sec-alt" id="highlights">
+  <div class="sec-inner" style="text-align:center;">
+    <div class="sec-label">Brampton's Trusted Locksmith</div>
+    <h2>Every Service, <span class="kw">Any Time</span></h2>
+    <p class="sec-sub" style="margin:0 auto;">Auto locksmith services, residential lockouts, commercial locks — we do it all.</p>
+    <div class="slider-wrap">
+      <div class="slides-container" id="slidesContainer">
+        <div class="slide active">
+          <span class="slide-em">🚗</span>
+          <div class="slide-title">Emergency Car Unlock — Brampton</div>
+          <p class="slide-desc">Car locked in Brampton? We unlock all makes and models safely — no damage, no break-in. <strong>Emergency car unlock service</strong> available 24/7 across Brampton & Mississauga.</p>
+          <a href="tel:4372266769" class="slide-cta">📞 Call Now — (437) 226-6769</a>
+        </div>
+        <div class="slide">
+          <span class="slide-em">🔑</span>
+          <div class="slide-title">Auto Key Programming & Replacement</div>
+          <p class="slide-desc">Lost your car key? We cut and program <strong>transponder keys, chip keys, and car remotes</strong> on-site for all makes. Brampton's affordable auto locksmith — no dealership needed.</p>
+          <a href="tel:4372266769" class="slide-cta">📞 Call Now — (437) 226-6769</a>
+        </div>
+        <div class="slide">
+          <span class="slide-em">🏠</span>
+          <div class="slide-title">Residential Lockouts Brampton</div>
+          <p class="slide-desc">Locked out of your home? Our <strong>residential lockout service</strong> gets you back inside in 15 minutes — no damage, no stress. Licensed, insured Brampton expert locksmiths.</p>
+          <a href="tel:4372266769" class="slide-cta">📞 Call Now — (437) 226-6769</a>
+        </div>
+        <div class="slide">
+          <span class="slide-em">🔧</span>
+          <div class="slide-title">Ignition Repair & Stuck Key Removal</div>
+          <p class="slide-desc">Key stuck in ignition? Ignition switch failing? We handle <strong>ignition repair, stuck key removal</strong> and full ignition replacements for any vehicle in Brampton — mobile, on-site.</p>
+          <a href="tel:4372266769" class="slide-cta">📞 Call Now — (437) 226-6769</a>
+        </div>
+        <div class="slide">
+          <span class="slide-em">🏢</span>
+          <div class="slide-title">Brampton Commercial Locksmith</div>
+          <p class="slide-desc">Master key systems, <strong>commercial lockouts</strong>, access control, and high-security locks for businesses across Brampton. Expert commercial locksmith services — available 24/7.</p>
+          <a href="tel:4372266769" class="slide-cta">📞 Call Now — (437) 226-6769</a>
+        </div>
+        <div class="slide">
+          <span class="slide-em">🔐</span>
+          <div class="slide-title">Change Door Lock Brampton</div>
+          <p class="slide-desc">Need to <strong>change door locks in Brampton</strong>? Lock repair, lock installation, lock rekey — fast, affordable service for homes and businesses. Same-day appointments available.</p>
+          <a href="tel:4372266769" class="slide-cta">📞 Call Now — (437) 226-6769</a>
+        </div>
+      </div>
+      <div class="slide-nav">
+        <button class="slide-prev" id="slidePrev" aria-label="Previous">← Prev</button>
+        <div class="slide-dots" id="slideDots"></div>
+        <button class="slide-next" id="slideNext" aria-label="Next">Next →</button>
       </div>
     </div>
   </div>
@@ -1049,6 +1257,33 @@ details[open] .faq-q::after{transform:rotate(45deg);}
           <span class="blog-tag">Automotive</span>
           <div class="blog-title">Truck or Van Locked Out?</div>
           <p class="blog-excerpt">Locked out of your pickup truck, cargo van, or commercial vehicle in Brampton? We unlock all vehicle types — cars, SUVs, trucks, and vans — fast, damage-free, 24/7.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">⛽<div class="blog-img-label">Fuel Delivery</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Road Emergency</span>
+          <div class="blog-title">Ran Out of Gas? Fuel Delivery Brampton</div>
+          <p class="blog-excerpt">Stranded on the road with an empty tank in Brampton or GTA? We provide emergency fuel delivery so you can get back on the road fast — no tow truck needed.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🔑<div class="blog-img-label">Stuck Key Removal</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Automotive</span>
+          <div class="blog-title">Stuck Key Removal Brampton</div>
+          <p class="blog-excerpt">Broken key fragment stuck in your door lock or ignition? Our stuck key removal service extracts broken keys from any lock — damage-free, on-site, anywhere in Brampton.</p>
+          <a href="#contact" class="blog-link">Get Help Now →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img">🔋<div class="blog-img-label">Jump Start</div></div>
+        <div class="blog-body">
+          <span class="blog-tag">Road Emergency</span>
+          <div class="blog-title">Dead Battery? Jump Start Brampton</div>
+          <p class="blog-excerpt">Car won't start due to a dead battery? We provide fast jump start service across Brampton and the GTA — no waiting, no tow. One call gets you back on the road.</p>
           <a href="#contact" class="blog-link">Get Help Now →</a>
         </div>
       </div>
@@ -1342,6 +1577,33 @@ document.querySelectorAll('.svc-card,.why-item,.review,.area,.wr').forEach(el =>
   el.style.transition='opacity 0.4s ease, transform 0.4s ease';
   obs.observe(el);
 });
+// Service Slider
+(function(){
+  const slides = document.querySelectorAll('.slide');
+  const dotsWrap = document.getElementById('slideDots');
+  if(!slides.length || !dotsWrap) return;
+  let cur = 0, timer;
+  slides.forEach((_,i)=>{
+    const d = document.createElement('button');
+    d.className = 'slide-dot' + (i===0?' active':'');
+    d.setAttribute('aria-label','Slide '+(i+1));
+    d.onclick = ()=>go(i);
+    dotsWrap.appendChild(d);
+  });
+  function go(n){
+    slides[cur].classList.remove('active');
+    dotsWrap.children[cur].classList.remove('active');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    dotsWrap.children[cur].classList.add('active');
+    resetTimer();
+  }
+  function resetTimer(){ clearInterval(timer); timer = setInterval(()=>go(cur+1), 5000); }
+  document.getElementById('slidePrev')?.addEventListener('click',()=>go(cur-1));
+  document.getElementById('slideNext')?.addEventListener('click',()=>go(cur+1));
+  resetTimer();
+})();
+
 const links = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
   let cur = '';
