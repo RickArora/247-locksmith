@@ -632,28 +632,29 @@ details[open] .faq-q::after{transform:rotate(45deg);}
 ════════════════════════════════ */
 .yt-shorts-grid{
   display:grid;grid-template-columns:1fr 1fr;gap:24px;
-  margin-top:36px;max-width:700px;margin-left:auto;margin-right:auto;
+  margin-top:36px;max-width:600px;margin-left:auto;margin-right:auto;
 }
 .yt-wrap{
   border-radius:16px;overflow:hidden;
-  box-shadow:0 8px 40px rgba(0,0,0,0.15);
-  aspect-ratio:9/16;background:#000;
+  box-shadow:0 8px 40px rgba(0,0,0,0.18);
+  aspect-ratio:9/16;background:#000;position:relative;display:block;
+  text-decoration:none;
 }
-.yt-wrap iframe{width:100%;height:100%;border:none;display:block;}
-.yt-placeholder{
-  width:100%;height:100%;min-height:320px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,#111827 0%,#1e293b 100%);
-  color:rgba(255,255,255,0.5);gap:14px;padding:24px;text-align:center;
+.yt-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s;}
+.yt-wrap:hover img{transform:scale(1.04);}
+.yt-play{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:10px;
+  background:rgba(0,0,0,0.35);transition:background .2s;
 }
-.yt-placeholder .yt-icon{font-size:52px;}
-.yt-placeholder p{font-size:14px;max-width:340px;line-height:1.6;}
-.yt-placeholder a{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#FF0000;color:#fff;padding:11px 24px;
-  border-radius:8px;font-size:14px;font-weight:700;
-  text-decoration:none;margin-top:4px;
+.yt-wrap:hover .yt-play{background:rgba(0,0,0,0.5);}
+.yt-play-btn{
+  width:60px;height:60px;background:#FF0000;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(255,0,0,0.5);
 }
+.yt-play-btn svg{width:26px;height:26px;fill:#fff;margin-left:4px;}
+.yt-play span{color:#fff;font-size:13px;font-weight:700;letter-spacing:.5px;}
 
 /* ════════════════════════════════
    MAP SECTION
@@ -828,7 +829,7 @@ details[open] .faq-q::after{transform:rotate(45deg);}
       </p>
       <div class="hero-btns">
         <a href="tel:4372266769" class="btn-white">📞 Call (437) 226-6769 — Free</a>
-        <a href="#contact" class="btn-ghost">Book Online →</a>
+        <a href="#contact" class="btn-ghost">Contact Us →</a>
       </div>
       <div class="hero-trust">
         <div class="t-pill">15-Min Response</div>
@@ -1406,12 +1407,20 @@ details[open] .faq-q::after{transform:rotate(45deg);}
     <h2>Watch How We <span class="kw">Work</span></h2>
     <p class="sec-sub" style="margin:0 auto 0;">See why Brampton homeowners &amp; drivers trust 247 Locksmith for every emergency.</p>
     <div class="yt-shorts-grid">
-      <div class="yt-wrap">
-        <iframe src="https://www.youtube.com/embed/YdiBuZShSi4?rel=0" title="247 Locksmith Brampton — Short 1" allowfullscreen loading="lazy"></iframe>
-      </div>
-      <div class="yt-wrap">
-        <iframe src="https://www.youtube.com/embed/GbEII4jBaNw?rel=0" title="247 Locksmith Brampton — Short 2" allowfullscreen loading="lazy"></iframe>
-      </div>
+      <a class="yt-wrap" href="https://www.youtube.com/shorts/YdiBuZShSi4" target="_blank" rel="noopener" aria-label="Watch Short 1 on YouTube">
+        <img src="https://img.youtube.com/vi/YdiBuZShSi4/maxresdefault.jpg" alt="247 Locksmith Brampton — Short 1" loading="lazy">
+        <div class="yt-play">
+          <div class="yt-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <span>Watch on YouTube</span>
+        </div>
+      </a>
+      <a class="yt-wrap" href="https://www.youtube.com/shorts/GbEII4jBaNw" target="_blank" rel="noopener" aria-label="Watch Short 2 on YouTube">
+        <img src="https://img.youtube.com/vi/GbEII4jBaNw/maxresdefault.jpg" alt="247 Locksmith Brampton — Short 2" loading="lazy">
+        <div class="yt-play">
+          <div class="yt-play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+          <span>Watch on YouTube</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1438,69 +1447,25 @@ details[open] .faq-q::after{transform:rotate(45deg);}
 <section class="sec sec-alt" id="contact">
   <div class="sec-inner">
     <div class="sec-label">Get in Touch</div>
-    <h2>Get Your <span class="kw">Free Quote</span> Today</h2>
-    <div class="contact-grid">
-      <div>
-        <p class="contact-pitch">The fastest way to reach us is a call — we pick up <span class="kw">24 hours a day</span>. Or fill out the form and we'll call you back within the hour.</p>
-        <div class="cm-list">
-          <a href="tel:4372266769" class="cm">
-            <div class="cm-icon">📞</div>
-            <div class="cm-body"><strong>(437) 226-6769</strong><span>Call or text — answered 24/7</span></div>
-            <div class="cm-arr">›</div>
-          </a>
-          <a href="mailto:Info@24x7locksmithbrampton.com" class="cm">
-            <div class="cm-icon">✉️</div>
-            <div class="cm-body"><strong>Info@24x7locksmithbrampton.com</strong><span>Email — reply within 1 hour</span></div>
-            <div class="cm-arr">›</div>
-          </a>
-          <div class="cm">
-            <div class="cm-icon">📍</div>
-            <div class="cm-body"><strong>1 Shenstone Ave, Brampton ON L6Z 2Y6</strong><span>Serving Brampton & all of GTA</span></div>
-          </div>
-          <div class="cm">
-            <div class="cm-icon">🕐</div>
-            <div class="cm-body"><strong>Open 24 Hours · 7 Days a Week</strong><span>No holidays, no exceptions</span></div>
-          </div>
-        </div>
+    <h2>Contact <span class="kw">247 Locksmith</span> Brampton</h2>
+    <div class="cm-list" style="max-width:600px;margin:0 auto;">
+      <a href="tel:4372266769" class="cm">
+        <div class="cm-icon">📞</div>
+        <div class="cm-body"><strong>(437) 226-6769</strong><span>Call or text — answered 24/7</span></div>
+        <div class="cm-arr">›</div>
+      </a>
+      <a href="mailto:Info@24x7locksmithbrampton.com" class="cm">
+        <div class="cm-icon">✉️</div>
+        <div class="cm-body"><strong>Info@24x7locksmithbrampton.com</strong><span>Email — reply within 1 hour</span></div>
+        <div class="cm-arr">›</div>
+      </a>
+      <div class="cm">
+        <div class="cm-icon">📍</div>
+        <div class="cm-body"><strong>1 Shenstone Ave, Brampton ON L6Z 2Y6</strong><span>Serving Brampton & all of GTA</span></div>
       </div>
-      <div class="form-card">
-        <div class="ft">Book a Service</div>
-        <div class="fs">We'll call you back within 60 minutes.</div>
-        <div class="frow">
-          <div class="fg"><label>First Name</label><input type="text" placeholder="John"></div>
-          <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"></div>
-        </div>
-        <div class="frow">
-          <div class="fg"><label>Phone</label><input type="tel" placeholder="(437) 000-0000"></div>
-          <div class="fg"><label>City</label><input type="text" placeholder="Brampton"></div>
-        </div>
-        <div class="fg">
-          <label>Service Needed</label>
-          <select>
-            <option>Emergency Lockout — Brampton</option>
-            <option>Car Lockout / Emergency Car Unlock</option>
-            <option>Truck / Van Lockout</option>
-            <option>Auto Key Programming</option>
-            <option>Transponder Key Programming</option>
-            <option>Car Remote Replacement</option>
-            <option>Key Stuck in Ignition</option>
-            <option>Ignition Repair / Switch Replacement</option>
-            <option>Car Key Copying</option>
-            <option>Spare Key / Lost Key Replacement</option>
-            <option>Battery Dead / Jump Start</option>
-            <option>Key Cutting Service</option>
-            <option>Lock Installation / Repair</option>
-            <option>Change Door Lock</option>
-            <option>Rekeying</option>
-            <option>Commercial Lockout</option>
-            <option>Residential Lockout</option>
-            <option>Safe Services</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="fg"><label>Notes</label><textarea placeholder="Any details about your situation..."></textarea></div>
-        <button class="fbtn" onclick="alert('Thanks! We\'ll call you within 60 minutes.\nOr call us now: (437) 226-6769')">Request Free Quote →</button>
-        <p class="fn">🔒 Your info is private. No spam, ever.</p>
+      <div class="cm">
+        <div class="cm-icon">🕐</div>
+        <div class="cm-body"><strong>Open 24 Hours · 7 Days a Week</strong><span>No holidays, no exceptions</span></div>
       </div>
     </div>
   </div>
@@ -1550,7 +1515,7 @@ details[open] .faq-q::after{transform:rotate(45deg);}
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#map">Our Location</a></li>
-          <li><a href="#contact">Book a Service</a></li>
+          <li><a href="#contact">Contact Us</a></li>
           <li><a href="tel:4372266769">Call Now</a></li>
         </ul>
       </div>
