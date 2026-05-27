@@ -630,12 +630,14 @@ details[open] .faq-q::after{transform:rotate(45deg);}
 /* ════════════════════════════════
    YOUTUBE SECTION
 ════════════════════════════════ */
+.yt-shorts-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:24px;
+  margin-top:36px;max-width:700px;margin-left:auto;margin-right:auto;
+}
 .yt-wrap{
-  margin-top:36px;
   border-radius:16px;overflow:hidden;
   box-shadow:0 8px 40px rgba(0,0,0,0.15);
-  max-width:840px;margin-left:auto;margin-right:auto;
-  aspect-ratio:16/9;background:#000;
+  aspect-ratio:9/16;background:#000;
 }
 .yt-wrap iframe{width:100%;height:100%;border:none;display:block;}
 .yt-placeholder{
@@ -765,6 +767,7 @@ details[open] .faq-q::after{transform:rotate(45deg);}
   .areas-grid{grid-template-columns:repeat(2,1fr);}
   .hero-btns{flex-direction:column;}
   .btn-white,.btn-ghost{width:100%;justify-content:center;}
+  .yt-shorts-grid{grid-template-columns:1fr;max-width:320px;}
 }
 </style>
 </head>
@@ -1402,17 +1405,13 @@ details[open] .faq-q::after{transform:rotate(45deg);}
     <div class="sec-label">See Us In Action</div>
     <h2>Watch How We <span class="kw">Work</span></h2>
     <p class="sec-sub" style="margin:0 auto 0;">See why Brampton homeowners &amp; drivers trust 247 Locksmith for every emergency.</p>
-    <div class="yt-wrap">
-      <!-- ✏️ OWNER: Replace VIDEO_ID below with your YouTube video ID -->
-      <!-- e.g. youtube.com/watch?v=ABC123XYZ → VIDEO_ID = ABC123XYZ -->
-      <div class="yt-placeholder">
-        <div class="yt-icon">▶️</div>
-        <p>Add your YouTube video here — paste your video ID into the code below, or send us the link.</p>
-        <a href="https://www.youtube.com/@247locksmithbrampton" target="_blank" rel="noopener">Visit Our YouTube Channel →</a>
+    <div class="yt-shorts-grid">
+      <div class="yt-wrap">
+        <iframe src="https://www.youtube.com/embed/YdiBuZShSi4?rel=0" title="247 Locksmith Brampton — Short 1" allowfullscreen loading="lazy"></iframe>
       </div>
-      <!-- Uncomment & replace VIDEO_ID when ready:
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID?rel=0" title="247 Locksmith Brampton — How We Work" allowfullscreen loading="lazy"></iframe>
-      -->
+      <div class="yt-wrap">
+        <iframe src="https://www.youtube.com/embed/GbEII4jBaNw?rel=0" title="247 Locksmith Brampton — Short 2" allowfullscreen loading="lazy"></iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -1517,9 +1516,9 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         <a href="tel:4372266769" class="fphone">(437) 226-6769</a>
         <div class="social-links">
           <!-- ✏️ Update these URLs with your actual social pages -->
-          <a href="https://www.instagram.com/247locksmithbrampton" target="_blank" rel="noopener" class="social-link">📸 Instagram</a>
-          <a href="https://www.tiktok.com/@247locksmithbrampton" target="_blank" rel="noopener" class="social-link">🎵 TikTok</a>
-          <a href="https://www.facebook.com/247locksmithbrampton" target="_blank" rel="noopener" class="social-link">📘 Facebook</a>
+          <a href="https://www.instagram.com/24x7locksmithbrampton" target="_blank" rel="noopener" class="social-link">📸 Instagram</a>
+          <a href="https://www.tiktok.com/@247locksmithgta" target="_blank" rel="noopener" class="social-link">🎵 TikTok</a>
+          <a href="https://www.facebook.com/people/247-Locksmith-Detailing/61573310850839/" target="_blank" rel="noopener" class="social-link">📘 Facebook</a>
         </div>
       </div>
       <div class="fcol">
