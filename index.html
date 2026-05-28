@@ -7,7 +7,7 @@
 
 <!-- SEO Meta Tags -->
 <meta name="description" content="247 Locksmith — Brampton's #1 car locksmith. Quick, professional, affordable automotive locksmith services: emergency car unlock, auto key programming, ignition repair, car remote replacement & key cutting service in Brampton & Mississauga. Call (437) 226-6769 — open 24/7.">
-<meta name="keywords" content="locksmith brampton, emergency locksmith brampton, car locksmith brampton, automotive locksmith brampton, auto locksmith services brampton, brampton expert locksmiths, brampton affordable locksmith services, brampton cheap locksmith, emergency car unlock brampton, emergency car unlock service in brampton, auto key programming brampton, ignition repair brampton, ignition switch repair brampton, key cutting service brampton, car remote replacement brampton, locked out brampton, car locked brampton, 24/7 locksmith brampton, emergency locksmith, emergency lockout brampton, mobile locksmith brampton, change door lock brampton, lock repair brampton, lock install brampton, lock rekey brampton, stuck key removal brampton, fuel delivery brampton, road emergency brampton, brampton commercial locksmith, residential lockouts brampton, commercial lockouts brampton, brampton emergency lockouts, transponder key programming brampton, spare keys lost key replacement brampton, car key copying brampton, battery dead jump start brampton, automotive locksmith services, car locksmith">
+<meta name="keywords" content="locksmith brampton, emergency locksmith brampton, car locksmith brampton, automotive locksmith brampton, auto locksmith services brampton, brampton expert locksmiths, brampton affordable locksmith services, brampton cheap locksmith, emergency car unlock brampton, emergency car unlock service in brampton, auto key programming brampton, ignition repair brampton, ignition switch repair brampton, key cutting service brampton, car remote replacement brampton, locked out brampton, car locked brampton, 24/7 locksmith brampton, emergency locksmith, emergency lockout brampton, mobile locksmith brampton, change door lock brampton, lock repair brampton, lock install brampton, lock rekey brampton, stuck key removal brampton, fuel delivery brampton, road emergency brampton, brampton commercial locksmith, residential lockouts brampton, commercial lockouts brampton, brampton emergency lockouts, transponder key programming brampton, spare keys lost key replacement brampton, car key copying brampton, battery dead jump start brampton, automotive locksmith services, car locksmith, emergency services brampton, keys locked in trunk brampton, child locked in car brampton, pet locked in vehicle brampton, $15 service call locksmith brampton, locksmith service call brampton">
 <meta name="contact" content="(437) 226-6769 | Info@24x7locksmithbrampton.com | Open 24/7">
 <meta property="og:phone_number" content="+14372266769">
 <meta property="business:contact_data:phone_number" content="+14372266769">
@@ -462,6 +462,7 @@ footer{background:#0F172A;padding:52px 60px 24px;}
   display:flex;align-items:center;justify-content:center;
   font-size:56px;position:relative;overflow:hidden;
 }
+.blog-img img{width:100%;height:100%;object-fit:cover;display:block;}
 .blog-img-label{
   position:absolute;bottom:10px;left:12px;
   background:rgba(0,0,0,0.55);color:#fff;
@@ -657,6 +658,24 @@ details[open] .faq-q::after{transform:rotate(45deg);}
 .yt-play span{color:#fff;font-size:13px;font-weight:700;letter-spacing:.5px;}
 
 /* ════════════════════════════════
+   PRICING MENU
+════════════════════════════════ */
+.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px;}
+.price-card{
+  background:#fff;border:2px solid var(--sky-lt);border-radius:14px;
+  padding:24px 18px;text-align:center;transition:all .2s;
+}
+.price-card:hover{border-color:var(--sky);box-shadow:0 6px 24px rgba(14,165,233,0.12);transform:translateY(-2px);}
+.price-icon{font-size:32px;margin-bottom:10px;}
+.price-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em;}
+.price-amt{font-size:26px;font-weight:900;color:var(--sky);line-height:1;}
+.price-suffix{font-size:12px;color:var(--muted);margin-top:4px;}
+.price-note{
+  margin-top:18px;text-align:center;font-size:13px;color:var(--muted);
+  background:var(--sky-lt);border-radius:10px;padding:12px 18px;
+}
+
+/* ════════════════════════════════
    MAP SECTION
 ════════════════════════════════ */
 .map-wrap{
@@ -727,6 +746,7 @@ details[open] .faq-q::after{transform:rotate(45deg);}
 
   /* AREAS */
   .areas-grid{grid-template-columns:repeat(2,1fr);}
+  .price-grid{grid-template-columns:repeat(2,1fr);}
 
   /* REVIEWS */
   .reviews-grid{grid-template-columns:1fr;}
@@ -769,6 +789,7 @@ details[open] .faq-q::after{transform:rotate(45deg);}
   .hero-btns{flex-direction:column;}
   .btn-white,.btn-ghost{width:100%;justify-content:center;}
   .yt-shorts-grid{grid-template-columns:1fr;max-width:320px;}
+  .price-grid{grid-template-columns:repeat(2,1fr);}
 }
 </style>
 </head>
@@ -791,25 +812,25 @@ details[open] .faq-q::after{transform:rotate(45deg);}
 <!-- TICKER STRIP -->
 <div class="ticker-wrap" aria-hidden="true">
   <div class="ticker">
-    <span>⚡ Emergency Locksmith Brampton</span>
+    <span>⚡ Emergency Services Brampton</span>
     <span>🚗 Car Locksmith Brampton</span>
-    <span>🔑 Auto Key Programming</span>
+    <span>🔑 Keys Locked in Trunk?</span>
+    <span>👶 Child Locked in Car?</span>
+    <span>🐾 Pet Locked in Vehicle?</span>
     <span>🏠 Residential Lockouts</span>
     <span>🔧 Ignition Repair Brampton</span>
     <span>🚛 Truck Door Unlocks</span>
-    <span>💰 Affordable Locksmith Brampton</span>
-    <span>✂️ Key Cutting & Stuck Key Removal</span>
-    <span>🔐 Change Door Lock Brampton</span>
+    <span>💰 Only $15 Service Call</span>
     <span>📞 (437) 226-6769 — Open 24/7</span>
-    <span>⚡ Emergency Locksmith Brampton</span>
+    <span>⚡ Emergency Services Brampton</span>
     <span>🚗 Car Locksmith Brampton</span>
-    <span>🔑 Auto Key Programming</span>
+    <span>🔑 Keys Locked in Trunk?</span>
+    <span>👶 Child Locked in Car?</span>
+    <span>🐾 Pet Locked in Vehicle?</span>
     <span>🏠 Residential Lockouts</span>
     <span>🔧 Ignition Repair Brampton</span>
     <span>🚛 Truck Door Unlocks</span>
-    <span>💰 Affordable Locksmith Brampton</span>
-    <span>✂️ Key Cutting & Stuck Key Removal</span>
-    <span>🔐 Change Door Lock Brampton</span>
+    <span>💰 Only $15 Service Call</span>
     <span>📞 (437) 226-6769 — Open 24/7</span>
   </div>
 </div>
@@ -1211,7 +1232,10 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img">🏠<div class="blog-img-label">Residential Lockout</div></div>
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&q=80" alt="Locksmith opening bedroom door — residential lockout Brampton" loading="lazy">
+          <div class="blog-img-label">Residential Lockout</div>
+        </div>
         <div class="blog-body">
           <span class="blog-tag">Residential</span>
           <div class="blog-title">Locked Out of Your Home?</div>
@@ -1220,7 +1244,10 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img">🚗<div class="blog-img-label">Car Lockout</div></div>
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80" alt="Locksmith opening car door — car lockout Brampton" loading="lazy">
+          <div class="blog-img-label">Car Lockout</div>
+        </div>
         <div class="blog-body">
           <span class="blog-tag">Automotive</span>
           <div class="blog-title">Car Lockout in Brampton?</div>
@@ -1256,7 +1283,10 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img">🚛<div class="blog-img-label">Truck Lockout</div></div>
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80" alt="Locksmith opening highway truck — truck lockout Brampton" loading="lazy">
+          <div class="blog-img-label">Truck Lockout</div>
+        </div>
         <div class="blog-body">
           <span class="blog-tag">Automotive</span>
           <div class="blog-title">Truck or Van Locked Out?</div>
@@ -1283,7 +1313,10 @@ details[open] .faq-q::after{transform:rotate(45deg);}
         </div>
       </div>
       <div class="blog-card">
-        <div class="blog-img">🔋<div class="blog-img-label">Jump Start</div></div>
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1609878656692-b3e7d1247861?w=600&q=80" alt="Emergency roadside jump start — battery boost Brampton" loading="lazy">
+          <div class="blog-img-label">Jump Start</div>
+        </div>
         <div class="blog-body">
           <span class="blog-tag">Road Emergency</span>
           <div class="blog-title">Dead Battery? Jump Start Brampton</div>
@@ -1362,6 +1395,42 @@ details[open] .faq-q::after{transform:rotate(45deg);}
       <div class="area"><div class="area-n">Pickering</div><div class="area-d">40 min</div></div>
       <div class="area"><div class="area-n">Ajax</div><div class="area-d">45 min</div></div>
     </div>
+  </div>
+</section>
+
+<!-- ══ PRICING MENU ══ -->
+<section class="sec" id="pricing">
+  <div class="sec-inner">
+    <div class="sec-label">Transparent Pricing</div>
+    <h2>Simple, Honest <span class="kw">Locksmith Prices</span></h2>
+    <p class="sec-sub">No hidden fees. Only $15 service call — competitive flat rates across Brampton & GTA.</p>
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-icon">🚗</div>
+        <div class="price-name">Car Lockout</div>
+        <div class="price-amt">$70<sup style="font-size:14px">+</sup></div>
+        <div class="price-suffix">Starting price</div>
+      </div>
+      <div class="price-card">
+        <div class="price-icon">🚛</div>
+        <div class="price-name">Truck Lockout</div>
+        <div class="price-amt">$120<sup style="font-size:14px">+</sup></div>
+        <div class="price-suffix">Starting price</div>
+      </div>
+      <div class="price-card">
+        <div class="price-icon">🏠</div>
+        <div class="price-name">Residential Lockout</div>
+        <div class="price-amt">$70<sup style="font-size:14px">+</sup></div>
+        <div class="price-suffix">Starting price</div>
+      </div>
+      <div class="price-card">
+        <div class="price-icon">🔋</div>
+        <div class="price-name">Battery Boost</div>
+        <div class="price-amt">$50<sup style="font-size:14px">+</sup></div>
+        <div class="price-suffix">Starting price</div>
+      </div>
+    </div>
+    <p class="price-note">⚡ All other services priced based on time of day, distance &amp; complexity. Call <strong>(437) 226-6769</strong> for a free quote — we're transparent about every cost before we start.</p>
   </div>
 </section>
 
